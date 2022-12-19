@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- minireset -->
-    <link rel="stylesheet" href="./common/minireset.min.css">
+    <link rel="stylesheet" href="../common/minireset.min.css">
     <!-- 검색창에 돋보기 아이콘 -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- font -->
-    <link rel="stylesheet" href="./fonts/font.css">
+    <link rel="stylesheet" href="../fonts/font.css">
     
     <title></title>
     <style>
@@ -189,7 +189,7 @@
     <nav class="bg_move">
         
         <div class="nav_left">
-        <h1 class="logo"><img src="./imgs/logo/logo1.jpg" alt="logo"></h1>
+        <h1 class="logo"><img src="../imgs/logo/logo1.jpg" alt="logo"></h1>
 
         <ul class="main_menu_ul">
             <li><a href="./html">Brand</a>
@@ -218,9 +218,9 @@
                     <label> <input type="text" value="Search"><span class="material-symbols-outlined">search</span></label>
                 
                     <ul>
-                        <li><a href="#"><img src="./imgs/sidebar/icon_login.png" alt=""></a></li>
-                        <li><a href="#"><img src="./imgs/sidebar/icon_mypage.png" alt=""></a></li>
-                        <li><a href="#"><img src="./imgs/sidebar/icon_bag.png" alt=""></a><span class="bag_circle">0</span></li>
+                        <li><a href="#"><img src="../imgs/sidebar/icon_login.png" alt=""></a></li>
+                        <li><a href="#"><img src="../imgs/sidebar/icon_mypage.png" alt=""></a></li>
+                        <li><a href="#"><img src="../imgs/sidebar/icon_bag.png" alt=""></a><span class="bag_circle">0</span></li>
                     </ul>
                 </div>
         </div>
@@ -229,18 +229,18 @@
 
 
     addEventListener('click',()=>{
-        const topPromotionbtn = document.querySelector('.x');
-        const topPromotion = document.querySelector('.top_promotion')
+        const AtopPromotionbtn = document.querySelector('.x');
+        const AtopPromotion = document.querySelector('.top_promotion')
 
-        topPromotion.style.height = '0'
-        topPromotion.style.transform = 'translateY(-10px)'
-        topPromotion.style.color = 'transparent'
-        topPromotionbtn.style.display = 'none' 
+        AtopPromotion.style.height = '0'
+        AtopPromotion.style.transform = 'translateY(-10px)'
+        AtopPromotion.style.color = 'transparent'
+        AtopPromotionbtn.style.display = 'none' 
     })
 
 
      addEventListener('scroll', () => {
-        const navbg = document.querySelector('.nav_left');
+        const Navbg = document.querySelector('.nav_left');
             scrollY > 90 ? navbg.style.width = '100%' : navbg.style.width = '50%';
 
      });
