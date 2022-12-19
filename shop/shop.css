@@ -20,6 +20,8 @@ main .container .shop_menu h2 {
   font-family: "YUniverse-B";
   font-size: 90px;
   margin-top: 293px;
+  font-weight: 500;
+  line-height: 135px;
 }
 
 main .container .shop_menu .menuCategory {
