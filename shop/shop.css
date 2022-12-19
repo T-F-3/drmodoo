@@ -13,6 +13,9 @@ main .container {
   padding: 0 5%;
   position: relative;
 }
+main .container .shop_menu {
+  margin-bottom: 30px;
+}
 main .container .shop_menu h2 {
   font-family: "YUniverse-B";
   font-size: 90px;
@@ -58,6 +61,10 @@ main .container .product_list .prodList li .box {
 main .container .product_list .prodList li {
   color: #757575;
   text-align: left;
+  margin: 30px 0;
+}
+main .container .product_list .prodList li:hover {
+  background-color: #ececec;
 }
 main .container .product_list .prodList li .description a {
   color: #000;
@@ -68,4 +75,21 @@ main .container .product_list .prodList li .description p {
   margin: 5px 0;
   font-size: 20px;
   line-height: 24px;
+}
+main .container .product_list .prodList li .description .priceArea .custom {
+  text-decoration-line: line-through;
+  text-decoration-color: #888;
+}
+main .container .product_list .prodList li .description .priceArea .price {
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  color: #000;
+}
+main .container .product_list .base_page {
+  margin: 30px 0;
+}
+main .container .product_list .base_page a {
+  padding: 5px;
 }
