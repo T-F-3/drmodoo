@@ -1,0 +1,71 @@
+body {
+  background-color: #f5f5f5;
+  text-align: center;
+  font-family: "Noto Sans KR";
+}
+a {
+  text-decoration: none;
+  font-style: none;
+  color: inherit;
+}
+main .container {
+  margin: 0 auto;
+  padding: 0 5%;
+  position: relative;
+}
+main .container .shop_menu h2 {
+  font-family: "YUniverse-B";
+  font-size: 90px;
+  margin-top: 293px;
+}
+
+main .container .shop_menu .menuCategory {
+  color: #888;
+  font-size: 20px;
+  font-weight: 300;
+  display: flex;
+}
+main .container .shop_menu .menuCategory li a {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+main .container .shop_menu .menuCategory > li > a::before {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 2px;
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: #bbb;
+  border-radius: 50%;
+}
+main .container .shop_menu .menuCategory > li:last-child > a::before {
+  display: none;
+}
+
+main .container .product_list .prodList {
+  display: grid;
+  grid-template: 1fr 1fr/ 1fr 1fr 1fr;
+}
+main .container .product_list .prodList li .box {
+  padding: 5%;
+}
+main .container .product_list .prodList li {
+  color: #757575;
+  text-align: left;
+}
+main .container .product_list .prodList li .description a {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+}
+main .container .product_list .prodList li .description p {
+  margin: 5px 0;
+  font-size: 20px;
+  line-height: 24px;
+}
