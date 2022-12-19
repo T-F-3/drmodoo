@@ -19,8 +19,6 @@
 
         body{
             font-family: 'Noto Sans KR';
-            background-color: aqua; /*나중에 지울거*/
-            height: 400vh; /*나중에 지울거*/
             margin: 0;
         }
         ul{
@@ -32,19 +30,18 @@
         /* 지금 회원 가입시 3천원 쿠폰 지급 */
         .top_promotion{
             display:  block;
-            width: 100%;
+            width: 100%; height: 36px;
             text-align: center;
             text-decoration: none;
             color:white;
             background-color: #004E5F;
-            height: 36px;
             line-height: 36px;
             font-size: 14px;
             position: relative;
             transition: 0.5s;
            
         }
-        .x{
+        .top_promotion > .x{
             position: absolute;
             right: 5px; top:25%;
         }
@@ -183,7 +180,7 @@
 <body>
 
     <a href="#" class="top_promotion">
-        <p>지금 회원 가입 시 3천원 쿠폰 지급 &gt;</p> <img class="x" src="./imgs/btn/btn_close.gif" alt="닫기">
+        <p>지금 회원 가입 시 3천원 쿠폰 지급 &gt;</p> <img class="x" src="../imgs/btn/btn_close.gif" alt="닫기">
     </a>
 
     <nav class="bg_move">
@@ -228,20 +225,33 @@
 <script>
 
 
-    addEventListener('click',()=>{
-        const AtopPromotionbtn = document.querySelector('.x');
+    
+
+    // AtopPromotionBtn.addEventListener('click',()=>{
+    //     const AtopPromotionBtn = document.querySelector('.x');
+    //     const AtopPromotion = document.querySelector('.top_promotion .x')
+
+        
+    // })
+
+    function Promotion(){
+        const AtopPromotionBtn = document.querySelector('.x');
         const AtopPromotion = document.querySelector('.top_promotion')
 
-        AtopPromotion.style.height = '0'
-        AtopPromotion.style.transform = 'translateY(-10px)'
-        AtopPromotion.style.color = 'transparent'
-        AtopPromotionbtn.style.display = 'none' 
-    })
+         AtopPromotionBtn.addEventListener('click', () => {
+            AtopPromotion.style.height = '0'
+            AtopPromotion.style.transform = 'translateY(-10px)'
+            AtopPromotion.style.color = 'transparent'
+            AtopPromotionBtn.style.display = 'none'
+         })
+    }
+
+    Promotion();
 
 
      addEventListener('scroll', () => {
         const Navbg = document.querySelector('.nav_left');
-            scrollY > 90 ? navbg.style.width = '100%' : navbg.style.width = '50%';
+            scrollY > 90 ? Navbg.style.width = '100%' : Navbg.style.width = '50%';
 
      });
        
