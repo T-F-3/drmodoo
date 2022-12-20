@@ -9,9 +9,10 @@ a {
   font-style: none;
   color: inherit;
 }
+/* 그리드 부분 css */
 main .container {
   padding: 0 5%;
-  margin: 0 auto 100px;
+  margin: 0 80px 100px;
   position: relative;
 }
 main .container .contents h2 {
@@ -22,83 +23,150 @@ main .container .contents h2 {
   line-height: 135px;
 }
 main .container .flex_review {
-}
-main .container .flex_review .flex_flex {
-  /* display: flex; */
   display: grid;
-  grid-template: 400px 400px / 1fr 1fr 1fr;
-  gap: 15px 10px;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  /* overflow: hidden; */
-  margin: 0 auto;
+  grid-template: 18vw 18vw / 25vw 25vw 25vw;
+  gap: 30px 15px;
   position: relative;
   top: 50px;
-}
-main .container .flex_review .flex_flex .main .box_img1 {
-  background: url(../imgs/Review/review1.jpg) no-repeat 50% / cover;
+  color: #fff;
   width: 100%;
-  height: 300px;
-  border-radius: 15px;
+  margin-bottom: 50px;
 }
-main .container .flex_review .flex_flex .main .box_img2 {
-  background: url(../imgs/Review/review2.jpg) no-repeat 50% / cover;
+main .container .flex_review .main .box {
   width: 100%;
-  height: 300px;
-  border-radius: 15px;
+  height: 100%;
 }
-main .container .flex_review .flex_flex .main .box_img3 {
-  background: url(../imgs/Review/review3.jpg) no-repeat 50% / cover;
-  width: 100%;
-  height: 300px;
-  border-radius: 15px;
-}
-main .container .flex_review .flex_flex .main .box_img4 {
-  background: url(../imgs/Review/review5.jpg) no-repeat 50% / cover;
-  width: 100%;
-  height: 300px;
-  border-radius: 15px;
-}
-main .container .flex_review .flex_flex .main .box_img5 {
-  background: url(../imgs/Review/review6.jpg) no-repeat 50% / cover;
-  width: 100%;
-  height: 300px;
-  border-radius: 15px;
-}
-main .container .flex_review .flex_flex .main .box_img6 {
-  background: url(../imgs/Review/review7.jpg) no-repeat 50% / cover;
-  width: 100%;
-  height: 300px;
-  border-radius: 15px;
-}
-main .container .flex_review .flex_flex .main .box {
-  display: flex;
+main .container .flex_review .main .box .flex {
   width: 80%;
+  margin: 0 auto;
+}
+main .container .flex_review .main .box_img1 {
+  background: url(../imgs/Review/review1.jpg) no-repeat 50% / cover;
+  border-radius: 15px;
+}
+main .container .flex_review .main .box_img2 {
+  background: url(../imgs/Review/review2.jpg) no-repeat 50% / cover;
+  border-radius: 15px;
+}
+main .container .flex_review .main .box_img3 {
+  background: url(../imgs/Review/review3.jpg) no-repeat 50% / cover;
+  border-radius: 15px;
+}
+main .container .flex_review .main .box_img4 {
+  background: url(../imgs/Review/review5.jpg) no-repeat 50% / cover;
+  border-radius: 15px;
+}
+main .container .flex_review .main .box_img5 {
+  background: url(../imgs/Review/review6.jpg) no-repeat 50% / cover;
+  border-radius: 15px;
+}
+main .container .flex_review .main .box_img6 {
+  background: url(../imgs/Review/review7.jpg) no-repeat 50% / cover;
+  border-radius: 15px;
+}
+main .container .flex_review .main .box {
+  display: flex;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
   font-size: 13px;
-  /* display: none; */
+  transition: 0.3s;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 1;
+  line-height: 1.5;
 }
-main .container .flex_review .flex_flex .main .box .flex {
+main .container .flex_review .main .box:hover .flex {
+  opacity: 0;
+}
+main .container .flex_review .main .box .flex .flex_name {
+  padding-top: 10px;
+}
+main .container .flex_review .main .box .flex_goods {
   display: flex;
+  padding-top: 20px;
+  line-height: 30px;
+  justify-content: space-evenly;
 }
 
-main .container .flex_review .flex_flex .main .box .flex svg {
+main .container .flex_review .main .box .flex svg {
   width: 18px;
   height: 17px;
 }
 
-/* main .container .flex_review .flex_flex .main img {
-  width: 550px;
-  height: 400px;
-  object-fit: cover;
-  vertical-align: middle;
-  border-radius: 15px;
-} */
-main .container .flex_review .flex_flex .main .box .flex img {
+main .container .flex_review .main .box .flex_goods img {
   width: 30px;
   height: 30px;
+}
+
+/* 리스트 부분 css */
+/*  main .container .widget_sub {
+  padding: 50px auto;
+  margin: 50px auto; 
+}*/
+main .container .widget_sub .widget_board {
+  padding: 50px auto;
+  margin: 50px auto;
+}
+main .container .widget_sub .widget_board .widget_w {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+main .container .widget_sub .widget_board .widget_w .widget_option {
+  display: flex;
+  margin: 0 20px;
+}
+main
+  .container
+  .widget_sub
+  .widget_board
+  .widget_w
+  .widget_option
+  .widget_option_filter1 {
+  margin: 0 10px;
+}
+main
+  .container
+  .widget_sub
+  .widget_board
+  .widget_w
+  .widget_option
+  .widget_option_filter2 {
+  margin: 0 10px;
+}
+main .container .widget_sub .widget_board .widget_w .option_sub {
+  display: flex;
+  margin-left: auto;
+}
+
+main .container .widget_sub .widget_board .widget_p .flex_list {
+  display: flex;
+  flex-direction: row;
+}
+
+main .container .widget_sub .widget_board .widget_p .shompu {
+  display: flex;
+  flex-direction: column;
+}
+main .container .widget_sub .widget_board .widget_p .shompu img {
+  width: 100px;
+  height: 100px;
+}
+main .container .widget_sub .widget_board .widget_p .riview_img img {
+  width: 150px;
+  height: 150px;
+}
+
+main .container .widget_sub .widget_board .widget_p .review {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .container .widget_sub .widget_board .widget_p .review svg {
+  width: 16px;
+  height: 15px;
 }
