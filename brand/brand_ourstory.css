@@ -174,3 +174,79 @@ nav .main_menu_ul li:hover>.sub_menu_ul li {
     text-align: center;
     border-radius: 50%;
 }
+
+/* 메인 시작 */
+
+.ourstory_main_top{
+    width: 100%;
+    margin: 150px 0;
+    display: grid;
+    grid-template-columns: 850px 850px;
+    grid-auto-rows: 515px;
+    justify-content: center;
+    background-color: beige;
+}
+
+.ourstory_main_top > div{
+    display: grid;
+    align-content: center;
+    padding: 35.0781px 60px;
+}
+
+.ourstory_main_top .bottom_line{
+    border-bottom: 1px silver solid ;
+}
+
+.ourstory_main_top .rigth_line{
+    border-right: 1px silver solid;
+}
+
+.ourstory_main_top>div>h2{
+    font-size: 80px;
+}
+
+.ourstory_main_top>div>p{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 80px 0;
+}
+
+.ourstory_main_top .ourstory_grid_bg{
+    background:url() no-repeat center ;
+    font-size: 0;
+}
+
+.ourstory_img {
+    width: 1486.81;
+    text-align: center;
+}
+
+.ourstory_txtbox{
+    height: 200px;
+    display:flex;
+    justify-content: space-evenly;
+    text-align: left;
+    margin-top: 90px;
+   
+}
+.ourstory_txtbox h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.ourstory_txtbox p{
+    width: 700px;
+    font-size:28px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.brand_label{
+    display: flex;
+    margin: 260px 0;
+
+}
+.brand_label > div{
+    margin-left: 292px;
+}
