@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>header</title>
+        <link rel="stylesheet" href="../common/minireset.min.css">
+        <link rel="stylesheet" href="../fonts/font.css">
+        <style>
+            header {
+                font-family: 'Noto Sans KR','YUniverse-B', 돋움, sans-serif;
+                overflow: hidden;
+                text-transform: capitalize;
+            }
+            header .Headerimgbox {
+                width: 100%; height: 100vh;
+                margin: 0 auto;
+                position: relative;
+            }
+            /* 메인이미지 사진 */
+            header .imgpos {
+                position: absolute;
+                top: 0;
+            }
+            header .imgpos img {
+                height: 100vh; width: 100%;
+                object-fit: cover;
+            }
+            /* 텍스트박스 */
+            header .img .text {
+                color: #fff;
+                position: absolute;
+                left: 5%;
+                right: 5%;
+                top: 43.3%;
+                transform: translateY(-50%);
+            }
+            header .img p {
+                font-size: 28px;
+                line-height: 1.5;
+                font-weight: 300;
+            }
+            header .img p span {
+                font-weight: 500;
+            }
+            header .img h2 {
+                font-family: 'YUniverse-B';
+                margin-top: 20px;
+                line-height: 1;
+                font-size: 10rem;
+                text-transform: uppercase;
+            }
+            /* header viewmore ani */
+            header .viewmore {
+                position: absolute;
+                left: 5%;
+                right: 5%;
+                bottom: 5%;
+                font-size: 14px;
+                line-height: 1.5;
+                color: #fff;
+                text-align: center;
+            }
+            header .viewmore .ani {
+                position: relative;
+                width: 18px;
+                height: 30px;
+                margin: 0 auto 10px;
+                border-radius: 10px;
+                border: 2px solid;
+            }
+            header .viewmore p {
+                padding: 0;
+                margin: 0;
+            }
+            /* 애니메이션적용 */
+            header .viewmore .ani::before {
+                content: "";
+                position: absolute;
+                top: 6px;
+                left: 50%;
+                margin-left: -1px;
+                width: 2px;
+                height: 5px;
+                background-color: #fff;
+                animation: headerMoveani 2s infinite;
+            }
+            /* 이미지 박스1 에니메이션 */
+            header .img1 h2 {
+                animation: headerH2ani .8s;
+            }
+            header .img1 .textbox1>p {
+                transition: .3s;
+                animation: headerPani .8s;
+            }
+            /* ------header ani------ */
+            @keyframes headerMoveani {
+                0% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(5px);
+                }
+                100% {
+                    transform: translateY(0px);
+                }
+            }
+            @keyframes headerH2ani {  
+                0% {
+                    transform: translateY(-120px);
+                }
+                100% {
+                    transform: translateY(0);
+                }
+            }
+            @keyframes headerPani {  
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="Headimgbox">
+                    <div class="img img1">
+                        <a href="#" target="_blank" class="imgpos">
+                            <img src="../imgs/Brand/brand-reorga.jpeg" alt="메인이미지1">
+                        </a>
+                        <div class="text textbox1">
+                            <p>살아 숨쉬는 <span>자연의 영혼</span>이 우리의 모든 삶으로 스며듭니다.</p>
+                            <h2>RE:ORGA</h2>
+                        </div>
+                        <div class="viewmore">
+                            <div class="ani"></div>
+                            <p>view more</p> 
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </header>
+    </body>
+</html>
