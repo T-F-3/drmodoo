@@ -126,6 +126,9 @@ main .container .widget_sub .widget_board .widget_w {
 main .container .widget_sub .widget_board .widget_w .widget_option {
   display: flex;
   margin: 0 20px;
+  font-size: 13px;
+  line-height: 2;
+  color: #333336;
 }
 main
   .container
@@ -135,6 +138,7 @@ main
   .widget_option
   .widget_option_filter1 {
   margin: 0 10px;
+  font-weight: bold;
 }
 main
   .container
@@ -144,6 +148,7 @@ main
   .widget_option
   .widget_option_filter2 {
   margin: 0 10px;
+  font-weight: normal;
 }
 main .container .widget_sub .widget_board .widget_w .option_sub {
   display: flex;
