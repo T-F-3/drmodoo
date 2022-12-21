@@ -1,4 +1,7 @@
 @charset "utf-8";
+:root {
+  --border-bottom: 1px solid #e9e9e9;
+}
 body {
   background-color: #f5f5f5;
   text-align: center;
@@ -30,7 +33,6 @@ main .container .flex_review {
   top: 50px;
   color: #fff;
   width: 100%;
-  margin-bottom: 50px;
 }
 main .container .flex_review .main .box {
   width: 100%;
@@ -75,12 +77,15 @@ main .container .flex_review .main .box {
   font-size: 13px;
   transition: 0.3s;
   cursor: pointer;
-  transition: 0.5s;
   opacity: 1;
   line-height: 1.5;
 }
+main .container .flex_review .main .box .flex {
+  /* background-color: rgba(0, 0, 0, 0.3); 하면 텍스트 부분에만 들어감,, */
+}
 main .container .flex_review .main .box:hover .flex {
   opacity: 0;
+  transition: 0.5s;
 }
 main .container .flex_review .main .box .flex .flex_name {
   padding-top: 10px;
@@ -112,10 +117,12 @@ main .container .widget_sub .widget_board {
   margin: 50px auto;
 }
 main .container .widget_sub .widget_board .widget_w {
-  padding: 20px;
+  padding: 50px 20px 20px;
   display: flex;
   justify-content: flex-start;
+  border-bottom: var(--border-bottom);
 }
+
 main .container .widget_sub .widget_board .widget_w .widget_option {
   display: flex;
   margin: 0 20px;
@@ -146,21 +153,35 @@ main .container .widget_sub .widget_board .widget_w .option_sub {
 main .container .widget_sub .widget_board .widget_p .flex_list {
   display: flex;
   flex-direction: row;
+  padding: 28px 0;
+  border-bottom: var(--border-bottom);
 }
 
 main .container .widget_sub .widget_board .widget_p .shompu {
   display: flex;
   flex-direction: column;
+  margin: 0 20px 0 0;
 }
 main .container .widget_sub .widget_board .widget_p .shompu img {
-  width: 100px;
-  height: 100px;
+  width: 92px;
+  height: 92px;
 }
-main .container .widget_sub .widget_board .widget_p .riview_img img {
-  width: 150px;
-  height: 150px;
+main .container .widget_sub .widget_board .widget_p .shompu a {
+  font-size: 13px;
+  color: #333336;
+  line-height: 1.3rem;
+  margin-top: 10px;
+  font-weight: bold;
+  overflow: hidden;
+  text-align: left;
 }
-
+main .container .widget_sub .widget_board .widget_p .shompu p {
+  font-size: 13px;
+  overflow: hidden;
+  margin-top: 4px;
+  color: #91949c;
+  text-align: left;
+}
 main .container .widget_sub .widget_board .widget_p .review {
   display: flex;
   flex-direction: column;
@@ -168,5 +189,44 @@ main .container .widget_sub .widget_board .widget_p .review {
 }
 main .container .widget_sub .widget_board .widget_p .review svg {
   width: 16px;
-  height: 15px;
+  height: 23px;
+}
+main .container .widget_sub .widget_board .widget_p .review .star_svg {
+  display: flex;
+  line-height: 23px;
+}
+main .container .widget_sub .widget_board .widget_p .review .star_svg .star {
+  margin: 0 20px 0 0;
+}
+main .container .widget_sub .widget_board .widget_p .review .star_svg .name {
+  font-size: 13px;
+  color: #91949c;
+  font-weight: 300;
+}
+main .container .widget_sub .widget_board .widget_p .review .review_p {
+  display: flex;
+  flex-direction: column;
+  max-width: 780px;
+
+  text-align: left;
+}
+main .container .widget_sub .widget_board .widget_p .review .review_p p {
+  font-size: 13px;
+  line-height: 1.3rem;
+  color: #333336;
+  font-weight: 300;
+}
+main .container .widget_sub .widget_board .widget_p .riview_img img {
+  width: 64px;
+  height: 64px;
+  margin: 12px 8px 8px 0;
+}
+main .container .widget_sub .widget_board .widget_p .review .widget_report {
+  color: #e6e9ec;
+  font-size: 13px;
+  cursor: pointer;
+}
+main .container .widget_sub .widget_board .widget_p .review .widget_report img {
+  width: 10px;
+  height: 12px;
 }
