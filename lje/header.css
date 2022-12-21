@@ -1,10 +1,23 @@
 @charset "utf-8";
 
+html {
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-family: 'Noto Sans KR';
+    margin: 0;
+    min-width: 1200px;
+}
+
 /* -------header---------- */
 header {
     font-family: 'Noto Sans KR','YUniverse-B', 돋움, sans-serif;
     overflow: hidden;
     text-transform: capitalize;
+    max-width: 100%;
+    position: relative;
+    min-height: 80vh;
 }
 header .Headerimgbox {
     width: 100%; height: 100vh;
