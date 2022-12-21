@@ -1,5 +1,12 @@
 @charset 'utf-8';
 
+/* https: //drmodoo.com/shopinfo/reorga.html
+    원본 링크
+*/
+
+
+
+
 body {
     background-color: #F5F5F5;
     font-family: 'Noto Sans KR';
@@ -10,6 +17,15 @@ ul {
     display: flex;
     padding: 0;
     list-style: none;
+}
+
+h2,
+h3 {
+    font-family: 'YUniverse-B';
+}
+
+p {
+    font-weight: 300;
 }
 
 /* 지금 회원 가입시 3천원 쿠폰 지급 */
@@ -25,6 +41,7 @@ ul {
     font-size: 14px;
     position: relative;
     transition: 0.5s;
+    z-index: 9999;
 
 }
 
@@ -36,6 +53,253 @@ ul {
 
 /* --------------------------------- */
 
+/* -------header---------- */
+header {
+    margin-bottom: 1050px;
+    font-family: 'Noto Sans KR', 'YUniverse-B', 돋움, sans-serif;
+    overflow: hidden;
+    text-transform: capitalize;
+    
+}
+
+header .Headerimgbox {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 메인이미지 사진 */
+header .imgpos {
+    position: absolute;
+    top: 0;
+}
+
+header .imgpos img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 이미지 박스2 */
+header .img2 {
+    opacity: 0;
+    transition: all .3s;
+}
+
+/* js */
+header .img2.ative {
+    opacity: 1;
+}
+
+/* 텍스트박스 */
+header .img .text {
+    color: #fff;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header .img p {
+    font-size: 28px;
+    margin: 50px 0 80px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+header .img h2 {
+    font-family: 'YUniverse-B';
+    margin: 30px 0;
+    line-height: 1;
+    font-size: 10rem;
+}
+
+header .textbox1 {
+    display: block;
+}
+
+header .textbox2 {
+    display: none;
+}
+
+/* js */
+header .img2.ative .textbox2 {
+    display: block;
+}
+
+/* header btn */
+header .btn a {
+    position: relative;
+    margin: 50px 0 30px 0;
+    padding: 14px 40px;
+    max-width: 245px;
+    font-size: 24px;
+    font-weight: 300;
+    border: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+header .btn2 a {
+    top: -60px;
+}
+
+/* js */
+header .img2.ative .btn2 a {
+    top: 0;
+}
+
+header .btn i.arrow {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 10px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+header .btn i.arrow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+header .btn i.arrow::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -5px;
+    display: block;
+    width: 12px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .8);
+    transform: rotate(-50deg);
+    transform-origin: top left;
+}
+
+/* header slide */
+header .sile {
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    width: auto;
+    text-align: left;
+    position: absolute;
+}
+
+header .sile span {
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, .8);
+    border-radius: 50%;
+    text-indent: -9999px;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: transparent;
+}
+
+header .sile span:nth-child(1).siled1 {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+header .sile span:nth-child(2).siled2 {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+/* header viewmore ani */
+header .viewmore {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+}
+
+header .viewmore .ani {
+    position: relative;
+    width: 18px;
+    height: 30px;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+    border: 2px solid;
+}
+
+header .viewmore p {
+    padding: 0;
+    margin: 0;
+}
+
+/* 애니메이션적용 */
+header .viewmore .ani::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 5px;
+    background-color: #fff;
+    animation: headerMoveani 2s infinite;
+}
+
+/* 이미지 박스1 에니메이션 */
+header .img1 h2 {
+    animation: headerH2ani .8s;
+}
+
+header .img1 .textbox1>p {
+    transition: .3s;
+    animation: headerPani .8s;
+}
+
+/* ------header ani------ */
+@keyframes headerMoveani {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes headerH2ani {
+    0% {
+        transform: translateY(-120px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes headerPani {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 헤더 끝 */
 
 /* 네비게이션 */
 nav {
@@ -46,6 +310,7 @@ nav {
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 99999;
 }
 
 nav a {
@@ -176,42 +441,323 @@ nav .main_menu_ul li:hover>.sub_menu_ul li {
     border-radius: 50%;
 }
 
+/* 메인시작 */
+
+.main_scalp_lab{
+    margin: 200px auto;
+    text-align: center;
+    
+}
+.main_scalp_lab h3{
+    font-size: 60px;
+    margin: 30px 0;
+    font-weight: 300;
+    color: #888888;
+    font-family: 'Noto Sans KR',sans-serif !important;
+    
+}
+.main_scalp_lab h2{
+    font-size: 180px;
+    margin: 30px 0;
+    opacity: 0;
+    transform: translateY(-90px);
+    transition: 1s;
+
+    
+}
+
+.main_scalp_lab p{
+    font-size: 30px;
+    margin: 30px 0 80px;
+
+}
 
 
-/* 움직이는 배너 */
+/* 지도 */
 
-.brand_benner_label {
-    width: 100%;
-    height: 96px;
+
+.map_flex{
+    display: flex;
+    justify-content: center;
+}
+.map_Information{
+    font-size: 14px;
+    margin: 200px auto;
+    padding: 0 50px;
+}
+.map_Information h2{
+    width: 1387px;
+    font-size: 60px;
+    padding: 50px 0 70px;
+    border-top: 2px solid black;
+    margin: 0 auto;
+}
+
+.map_Information table{
+    width: 685px;
+    margin: 0 30px;
+}
+
+.map_Information tbody{
+    position: relative;
+    margin: 10px 0 0;
+}
+.map_Information tr{
+    border-top: 1px #ddd solid;
+    
+}
+
+.map_Information tr span{
+    font-size: 18px;
+    color: #888;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.map_Information tr:last-child{
+    border-bottom: 1px #ddd solid;
+} 
+.map_Information th{
+    font-size: 30px;
+    padding: 25px 0 25px 10px;
+    font-size: 1.5rem;
+    font-family: 'YUniverse-B', 'Noto Sans KR', sans-serif;
+    text-align: left;
+    vertical-align: middle;
+}
+.map_Information td{
+    font-size: 24px;
+    padding: 25px 10px;
+    border: 0 none;
+    background: none;
+    font-weight: 300;
+}
+
+.map_Information ul{
+    width: 715px;
+    height: 422px;
+    padding: 0px 15px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.map_Information ul li{
+
+    padding: 25px 10px;
+    border-top: #C0C0BF 1px solid;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.map_Information ul li p{
+    text-align: left;
+    display: inline-block;
+}
+
+.map_Information ul li span{
+    font-size: 30px;
+    font-family: 'YUniverse-B', 돋움, sans-serif;
+    margin-right: 20px;
+    vertical-align: middle;
+
+}
+
+.map_wrap {position:relative;overflow:hidden;width:100%;height:350px;}
+.radius_border{border:1px solid #919191;border-radius:5px;}     
+.custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+.custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
+.custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}       
+.custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
+.custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}    
+.custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
+.custom_typecontrol .selected_btn:hover {color:#fff;}   
+.custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#f5f5f5;} 
+.custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}     
+.custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}             
+.custom_zoomcontrol span:first-child{border-bottom:1px solid #bfbfbf;}    
+
+/* -----footer------ */
+
+footer {
+    margin: 0 auto 0;
+    position: relative;
+    padding: 0 0 150px;
+    background: url(../imgs/index/foot_bg.jpg) repeat center;
+    background-size: cover;
+    clear: both;
     overflow: hidden;
-    margin: 150px 0;
-
-
+    color: #fff;
+    font-family: 'Noto Sans KR', 'YUniverse-B', 돋움, sans-serif;
 }
 
-.brand_benner {
-    padding: 0;
-    list-style: none;
-    width: 2000%;
-    /* transition-duration: 40s;
-        transform: translate3d(-5561.09px, 0px, 0px);
-        transition-timing-function: linear; */
-    animation-name: benner;
-    animation-iteration-count: infinite;
-    animation: benner 35s linear infinite;
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.brand_benner>li {
-    margin-right: 440px;
-    float: left;
-    font-size: 6rem;
-    line-height: 1;
+footer .footer_textbox1 {
+    margin: 0 auto;
+    padding: 100px 5%;
+    background-color: #000;
+}
+
+footer .footer_textbox1>h2 {
+    margin: 0 0 50px;
+    font-weight: 500;
+}
+
+footer .footer_textbox1>h2 a img {
+    width: auto;
+    height: auto;
+    border: none;
+    vertical-align: top;
+}
+
+footer .footer_textbox1 ul {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    clear: both;
+    overflow: hidden;
+    line-height: 2;
+}
+
+footer .footer_textbox1 ul li.footer_box {
+    width: 50%;
+}
+
+footer .footer_textbox1 ul li {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+footer .footer_textbox1 ul li p {
+    font-size: 14px;
+    line-height: 2.2;
+    font-weight: 300;
+}
+
+footer .footer_textbox1 ul li h2 {
+    margin: 0 0 10px;
+    font-size: 1.8rem;
     font-family: 'YUniverse-B';
+    font-weight: 500;
 }
 
-@keyframes benner {
-    to {
-        transform: translate3d(-5561.09px, 0px, 0px);
-    }
+footer .footer_textbox1 ul li span {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 10px;
+}
 
+footer .footer_textbox1 ul li p .footer_before::before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 17px;
+    transform: translateY(-50%);
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: #555;
+}
+
+footer .footer_textbox1 ul li.footer_guide {
+    width: 25%;
+    padding: 0 2.5%;
+}
+
+footer .footer_textbox1 ul li .footer_address {
+    display: block;
+    margin-top: 20px;
+}
+
+footer .footer_textbox1 ul li .footer_address span {
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer_guide p {
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px #fff solid;
+}
+
+footer .footer_guide p a {
+    display: block;
+}
+
+footer .footer_guide i.arrow {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 0;
+    margin: 0;
+    display: inline-block;
+    width: 24px;
+    height: 10px;
+    vertical-align: middle;
+}
+
+footer .footer_guide i.arrow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+footer .footer_guide i.arrow::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -5px;
+    display: block;
+    width: 12px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .8);
+    transform: rotate(-50deg);
+    transform-origin: top left;
+}
+
+footer .footer_textbox2 {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    display: flex;
+    height: auto;
+    font-size: 14px;
+    line-height: 150px;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+}
+
+footer .footer_textbox2 span {
+    display: inline-block;
+    margin-right: 5%;
+    font-size: 1.2rem;
+}
+
+footer .footer_textbox2 span:last-child {
+    margin-right: 0;
+}
+
+footer .footer_textbox2 .footer_contact {
+    font-size: 1.8rem;
+    font-family: 'YUniverse-B';
 }
