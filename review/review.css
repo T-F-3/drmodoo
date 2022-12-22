@@ -210,20 +210,40 @@ main .container .widget_sub .widget_board .widget_p .review .review_p {
   display: flex;
   flex-direction: column;
   max-width: 780px;
-
   text-align: left;
 }
+
 main .container .widget_sub .widget_board .widget_p .review .review_p p {
   font-size: 13px;
   line-height: 1.7rem;
   color: #333336;
   font-weight: 400;
 }
+main .container .widget_sub .widget_board .widget_p .review .any p span {
+  display: none;
+}
+main .container .widget_sub .widget_board .widget_p .review .any #close_btn {
+  display: none;
+}
 main .container .widget_sub .widget_board .widget_p .riview_img img {
   width: 64px;
   height: 64px;
   margin: 12px 8px 8px 0;
 }
+main .container .widget_sub .widget_board .widget_p #more_btn,
+#close_btn {
+  font-size: 13px;
+  color: #91949c;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main .container .widget_sub .widget_board .widget_p .riview_img .img.active {
+  width: 120px;
+  height: 120px;
+}
+
+/* 신고,차단 */
 main .container .widget_sub .widget_board .widget_p .review .widget_report {
   color: #e6e9ec;
   font-size: 13px;
@@ -234,18 +254,50 @@ main .container .widget_sub .widget_board .widget_p .review .widget_report img {
   height: 12px;
 }
 
-main .container .base_page {
-  margin: 30px 0;
-  color: #333336;
+/* 우하단 운영정책 / 리뷰작성하기 */
+main .container .bottom {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 30px 0 0 0;
 }
-main .container .base_page a {
-  margin: 30px 5px;
+main .container .bottom .right_review {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main .container .bottom .right_review .span span {
+  font-size: 13px;
+  color: #b8bbc2;
+  margin-right: 15px;
+}
+main .container .bottom .right_review .write {
+  border: 1px solid #034e5f;
+  color: #034e5f;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 5px;
+  max-width: 120px;
+  flex-grow: 1;
+  text-align: center;
+  line-height: 19px;
+  margin-left: 10px;
+}
+/* 바닥 번호 및 리뷰작성 */
+main .container .bottom .base_page {
+  color: #333336;
+  display: flex;
+  margin-right: auto;
+  margin: 0 auto;
+}
+main .container .bottom .base_page a {
+  margin: 10px 8px;
   font-size: 13px;
 }
-main .container .base_page img {
+main .container .bottom .base_page img {
   width: 18px;
   height: 19px;
 }
-main .container .base_page a:nth-child(2) {
+main .container .bottom .base_page a:nth-child(2) {
   font-weight: bold;
 }

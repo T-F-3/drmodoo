@@ -901,8 +901,9 @@
                   <div class="review_p">
                     <p>
                       전에 다른 샴푸쓰고도 안잡힌 머리에 비듬이 이거 쓰고 나서
-                      바로 잡힌 거 보고 너무 신기했어요 ㅋㅋㅋ 이제는 머리
-                      상하지 않게 잘 관리해보려고 합니다
+                      바로<br />
+                      잡힌 거 보고 너무 신기했어요 ㅋㅋㅋ 이제는 머리 상하지
+                      않게 잘 관리해보려고 합니다
                     </p>
                   </div>
                   <div class="riview_img">
@@ -995,17 +996,26 @@
                       <span>home**</span>
                     </div>
                   </div>
-                  <div class="review_p">
+                  <div class="review_p any active">
                     <p>
-                      여름에 쿨링샴푸 최고인듯요 아들이 머리냄새가 여간 심한게
+                      여름에 쿨링샴푸 최고인듯요 아들이 머리냄새가 여간
+                      심한게<br />
                       아니라 이것저것 좋다는거 다 써봐도 별소용이 없더니, 이거
                       쓴후로 많이 괜찮아졌어요 열도 많아서 시원한 샴푸 쓰니까
-                      두피가 시원해지는 효과도 있는 것 같구요
+                      두피가 시원해지는
+                      <span class="span">효과도 있는 것 같구요</span>
                     </p>
+                    <div id="more_btn">더보기</div>
+                    <div id="close_btn">접기^</div>
+                    <div class="riview_img">
+                      <img
+                        src="../imgs/Review/review6.jpg"
+                        alt="/review6"
+                        class="img"
+                      />
+                    </div>
                   </div>
-                  <div class="riview_img">
-                    <img src="../imgs/Review/review6.jpg" alt="/review6" />
-                  </div>
+
                   <div class="widget_report">
                     <img src="./review_report.png" alt="report" />
                     <span>신고,차단</span>
@@ -1015,16 +1025,53 @@
             </div>
           </div>
         </div>
-        <div class="base_page">
-          <a href="#"><img src="../imgs/btn/btn_page_prev.png" alt="prev" /></a>
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
-          <a href="#">5</a>
-          <a href="#"><img src="../imgs/btn/btn_page_next.png" alt="next" /></a>
+        <div class="bottom">
+          <div class="right_review">
+            <div class="span">
+              <span>운영 정책</span>
+            </div>
+            <div class="write">
+              <a href="#"><p>리뷰 작성하기</p></a>
+            </div>
+          </div>
+          <div class="base_page">
+            <a href="#"
+              ><img src="../imgs/btn/btn_page_prev.png" alt="prev"
+            /></a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#"
+              ><img src="../imgs/btn/btn_page_next.png" alt="next"
+            /></a>
+          </div>
         </div>
       </div>
     </main>
+
+    <script>
+      function active() {
+        const span = document.querySelector(".span");
+        const more_btn = document.querySelector("#more_btn");
+        const close_btn = document.querySelector("#close_btn");
+        const img = document.querySelector(".img");
+
+        more_btn.addEventListener("click", () => {
+          span.style.display = "inline-block";
+          img.classList.add("active");
+          more_btn.style.display = "none";
+          close_btn.style.display = "block";
+        });
+        close_btn.addEventListener("click", () => {
+          span.style.display = "none";
+          more_btn.style.display = "block";
+          close_btn.style.display = "none";
+          img.classList.remove("active");
+        });
+      }
+      active();
+    </script>
   </body>
 </html>
