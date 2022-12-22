@@ -41,7 +41,6 @@ main .container .event .event_list {
 }
 main .container .event .event_list .list {
   margin: 10px;
-  /* padding: 20px; */
   background-color: #fff;
   border: 1px solid #ddd;
   list-style: 1.5;
@@ -69,4 +68,58 @@ main .container .event .event_list .list .text span {
   font-weight: 300;
   margin-bottom: 0;
   color: #888;
+}
+
+/* search 부분 */
+main .container .ev_day {
+  padding: 10px 0;
+  margin: 10px 220px;
+}
+main .container .ev_day fieldset {
+  text-align: left;
+  border: none;
+}
+main .container .ev_day fieldset p select {
+  display: inline-block;
+  min-width: 100px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 0 0 5px;
+  color: #000;
+  border: 1px #ddd solid;
+}
+main .container .ev_day fieldset p input {
+  outline: none;
+  width: 162px;
+  font-size: 12px;
+  height: 28px;
+  line-height: 28px;
+  padding: 2px 4px;
+  border: 1px solid #d5d5d5;
+}
+main .container .ev_day fieldset p a {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 11px;
+  line-height: 18px;
+  text-decoration: none;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+  color: #000;
+  background-color: #fff;
+}
+/* 하단 페이지 */
+main .container .base_page {
+  /* margin: 30px auto; */
+}
+main .container .base_page a {
+  /* font-size: 13px;
+  display: inline-block;
+  text-align: center;
+  line-height: 13px;
+  color: #333336; */
 }
