@@ -25,6 +25,8 @@
       <link rel="stylesheet" href="./support-css/support-notice.css" />
       <!-- nav js -->
       <script defer src="./support-js/nav.js"></script>
+      <!-- modal js -->
+      <script defer src="./support-js/modal.js"></script>
       <style></style>
    </head>
    <body>
@@ -117,7 +119,46 @@
             <img src="../imgs/btn/btn_page_next.png" alt="nextbtn" id="noticeLight" />
          </div>
       </div>
-      <!-- 우측 하단 아이콘 -->
+      <!-- 사이드네비 -->
+      <div id="sidebar_container">
+         <div class="side_btn">
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+         <ul id="side_nav">
+            <li>
+               <a href="#"
+                  ><img src="../imgs/sidebar/sidebar_promotion.png" alt="프로모션" /> <br />이달의<br />
+                  프로모션</a
+               >
+            </li>
+            <li>
+               <a href="#">
+                  <img src="../imgs/sidebar/sidebar_scalp.png" alt="가이드" />
+                  <br />닥터모두<br />
+                  두피가이드
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="../imgs/sidebar/sidebar_review.png" alt="리뷰" />
+                  <br />리뷰
+               </a>
+            </li>
+            <li>
+               <a href="#" target="_blank">
+                  <img src="../imgs/sidebar/sidebar_kakao.png" alt="카톡" />
+                  <br />카카오톡
+               </a>
+            </li>
+            <li>
+               <a href="#" target="_blank">
+                  <img src="../imgs/sidebar/sidebar_instagram.png" alt="인스타" />
+                  <br />인스타그램
+               </a>
+            </li>
+         </ul>
+      </div>
+      <!-- 우측 하단 상담챗 -->
       <div class="gybbpr">
          <div class="gybbpr_circle">2</div>
          <img src="../imgs/btn/emoji.png" alt="표정" />
@@ -202,11 +243,19 @@
                   <p>다른 방법으로 상담</p>
 
                   <div class="another_ask_wrapper">
-                     <img src="../imgs/btn/app-messenger-naver-talk.png" alt="" />
+                     <a href="https://www.naver.com">
+                        <img src="../imgs/btn/app-messenger-naver-talk.png" alt="네이버톡톡" class="naver_btn" />
+                     </a>
 
                      <div class="phone_box">
                         <i class="fa-solid fa-phone"></i>
                      </div>
+                  </div>
+                  <div id="naver_talk">
+                     <span>톡톡</span>
+                  </div>
+                  <div id="phone_num">
+                     <span>전화 :82 31-952-1128</span>
                   </div>
                </div>
 
@@ -304,19 +353,5 @@
             </div>
          </div>
       </footer>
-      <script>
-         const xbtn = document.querySelector('.xmark');
-         const gybbpr = document.querySelector('.gybbpr');
-         const counseApp = document.querySelector('.counseApp');
-
-         gybbpr.addEventListener('click', () => {
-            counseApp.classList.add('on');
-            gybbpr.classList.add('off');
-         });
-         xbtn.addEventListener('click', () => {
-            counseApp.classList.remove('on');
-            gybbpr.classList.remove('off');
-         });
-      </script>
    </body>
 </html>
