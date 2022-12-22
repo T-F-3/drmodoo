@@ -6,7 +6,11 @@
     <title>review</title>
     <!-- font -->
     <link rel="stylesheet" href="../fonts/font.css" />
-
+    <!-- 검색창에 돋보기 아이콘 -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <!-- reset -->
     <link rel="stylesheet" href="../common/minireset.min.css" />
     <!-- css -->
@@ -17,6 +21,95 @@
   </head>
 
   <body>
+    <a href="#" class="top_promotion">
+      <p>지금 회원 가입 시 3천원 쿠폰 지급 &gt;</p>
+      <img class="x" src="../imgs/btn/btn_close.gif" alt="닫기" />
+    </a>
+
+    <nav class="bg_move">
+      <div class="nav_left">
+        <h1 class="logo"><img src="../imgs/logo/logo1.jpg" alt="logo" /></h1>
+
+        <ul class="main_menu_ul">
+          <li>
+            <a href="./html">Brand</a>
+            <ul class="sub_menu_ul">
+              <!-- 중첩메뉴 -->
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Our Philosophy</a></li>
+              <li><a href="#">RE:ORGA</a></li>
+              <li><a href="#">Scalp Lab</a></li>
+            </ul>
+          </li>
+          <li><a href="./html">shop</a></li>
+          <li><a href="./html">Review</a></li>
+          <li><a href="./html">Event</a></li>
+          <li>
+            <a href="./html">Support</a>
+            <ul class="sub_menu_ul">
+              <!-- 중첩메뉴 -->
+              <li><a href="#">Notice</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Q&A</a></li>
+              <li><a href="#">Guide</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="nav_right">
+          <label>
+            <input type="text" value="Search" /><span
+              class="material-symbols-outlined"
+              >search</span
+            ></label
+          >
+
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="../imgs/sidebar/icon_login.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="../imgs/sidebar/icon_mypage.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="../imgs/sidebar/icon_bag.png" alt="" /></a
+              ><span class="bag_circle">0</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script>
+      // AtopPromotionBtn.addEventListener('click',()=>{
+      //     const AtopPromotionBtn = document.querySelector('.x');
+      //     const AtopPromotion = document.querySelector('.top_promotion .x')
+
+      // })
+
+      function Promotion() {
+        const AtopPromotionBtn = document.querySelector(".x");
+        const AtopPromotion = document.querySelector(".top_promotion");
+
+        AtopPromotionBtn.addEventListener("click", () => {
+          AtopPromotion.style.height = "0";
+          AtopPromotion.style.transform = "translateY(-10px)";
+          AtopPromotion.style.color = "transparent";
+          AtopPromotionBtn.style.display = "none";
+        });
+      }
+
+      Promotion();
+
+      addEventListener("scroll", () => {
+        const Navbg = document.querySelector(".nav_left");
+        scrollY > 90
+          ? (Navbg.style.width = "100%")
+          : (Navbg.style.width = "50%");
+      });
+    </script>
     <main>
       <div class="container">
         <div class="contents">
@@ -1073,5 +1166,102 @@
       }
       active();
     </script>
+    <footer>
+      <div class="footer_container">
+        <div class="footer_textbox1">
+          <h2>
+            <a href="./index.html">
+              <img src="../imgs/logo/logo2.jpg" alt="Dr.Modoo" />
+            </a>
+          </h2>
+          <ul>
+            <li class="footer_info">
+              <div class="footer_box">
+                <h2>Info</h2>
+                <p>
+                  <span class="footer_before">상호 : (주)그린에너지랩</span>
+                  <span class="footer_before">대표자 : 김민지</span>
+                  <span class="footer_before">전화번호 : 031-952-1128</span>
+                  <span>이메일 : cs@drmodoo.com</span>
+                </p>
+                <p>
+                  <span class="footer_before"
+                    >사업자등록번호 : 242-88-01412</span
+                  >
+                  <span>
+                    통신판매업신고번호 : 2020-경기파주-0686
+                    <a
+                      href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2428801412"
+                      target="_blank"
+                      >[사업자정보확인]</a
+                    >
+                  </span>
+                </p>
+                <p>
+                  <span class="footer_before"
+                    >주소 : [10809] 경기도 파주시 파평면 파평산로478번길 46 1층
+                    그린에너지랩</span
+                  >
+                  <span>개인정보책임관리자 : 김예나</span>
+                </p>
+                <p class="footer_address">
+                  Copyright &copy; 2022.<span>닥터모두</span> All Rights
+                  Reserved.
+                </p>
+              </div>
+            </li>
+            <li class="footer_guide">
+              <div class="footer_box">
+                <h2>Guide</h2>
+                <p>
+                  <a href="https://drmodoo.com/member/agreement.html">
+                    이용약관
+                    <i class="arrow"></i>
+                  </a>
+                </p>
+                <p>
+                  <a href="https://drmodoo.com/member/privacy.html">
+                    개인정보처리방침
+                    <i class="arrow"></i>
+                  </a>
+                </p>
+                <p>
+                  <a href="./FAQ.html" target="_blank">
+                    자주묻는질문
+                    <i class="arrow"></i>
+                  </a>
+                </p>
+              </div>
+            </li>
+            <li class="footer_social">
+              <div class="footer_box">
+                <h2>Social</h2>
+                <p>
+                  <a href="https://www.instagram.com" target="_blank"
+                    >Instagram</a
+                  >
+                </p>
+                <p>
+                  <a href="https://ko-kr.facebook.com" target="_blank"
+                    >Facebook</a
+                  >
+                </p>
+                <p>
+                  <a href="https://accounts.kakao.com" target="_blank"
+                    >Kakaotalk</a
+                  >
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="footer_textbox2">
+          <span class="footer_contact">Contact us</span>
+          <span>고객센터 : 031-952-1128</span>
+          <span>상담 시간 : 10시 - 18시</span>
+          <span>주말 및 공휴일 휴무</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
