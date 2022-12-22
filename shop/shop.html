@@ -266,6 +266,57 @@
       </div>
     </main>
 
+    <!-- 사이드바 -->
+    <div id="sidebar_container">
+      <div class="side_btn">
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+      <ul id="side_nav">
+        <li>
+          <a href="#"
+            ><img src="../imgs/sidebar/sidebar_promotion.png" alt="프로모션" />
+            <br />이달의<br />
+            프로모션</a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <img src="../imgs/sidebar/sidebar_scalp.png" alt="가이드" />
+            <br />닥터모두<br />
+            두피가이드
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../imgs/sidebar/sidebar_review.png" alt="리뷰" />
+            <br />리뷰
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <img src="../imgs/sidebar/sidebar_kakao.png" alt="카톡" />
+            <br />카카오톡
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <img src="../imgs/sidebar/sidebar_instagram.png" alt="인스타" />
+            <br />인스타그램
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const sidebar = document.querySelector("#sidebar_container");
+      const sidebarBtn = document.querySelector(".side_btn");
+
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+    </script>
+
+    <!-- 푸터 -->
     <footer>
       <div class="footer_container">
         <div class="footer_textbox1">

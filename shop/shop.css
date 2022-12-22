@@ -258,6 +258,65 @@ main .container .product_list .base_page a {
   color: #333336;
 }
 
+/* 사이드바 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#sidebar_container {
+  z-index: 999;
+  background-color: #fff;
+
+  position: fixed;
+
+  right: 0;
+  top: 30%;
+
+  width: 74px;
+
+  font-size: 13px;
+  line-height: 1.3;
+  text-align: center;
+
+  transition: all 0.5s;
+  transform: translateX(74px);
+}
+#sidebar_container.open {
+  transform: translateX(0);
+}
+.side_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  right: 100%;
+  background: #444;
+  color: white;
+  width: 20px;
+  height: 80px;
+  border-radius: 10px 0 0 10px;
+
+  cursor: pointer;
+}
+#side_nav {
+  display: block;
+}
+#sidebar_container li:nth-child(1) {
+  background-color: #004e5f;
+  color: #fff;
+}
+#sidebar_container li:nth-child(2) {
+  background-color: #000;
+  color: #fff;
+}
+#sidebar_container ul li a {
+  display: block;
+  padding: 4px;
+}
+</style>
+
 /* -----footer------ */
 footer {
   margin: 0 auto 0;
