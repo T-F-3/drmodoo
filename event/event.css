@@ -114,12 +114,13 @@ main .container .ev_day fieldset p a {
 }
 /* 하단 페이지 */
 main .container .base_page {
-  /* margin: 30px auto; */
+  margin: 30px auto;
 }
 main .container .base_page a {
-  /* font-size: 13px;
+  font-size: 13px;
   display: inline-block;
   text-align: center;
   line-height: 13px;
-  color: #333336; */
+  color: #333336;
+  font-weight: bold;
 }

@@ -97,5 +97,6 @@ main .container .product_list .base_page a {
   margin: 30px 0;
   font-size: 13px;
   line-height: 13px;
+  font-weight: bold;
   color: #333336;
 }
