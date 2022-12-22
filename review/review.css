@@ -15,8 +15,9 @@ a {
 /* 그리드 부분 css */
 main .container {
   padding: 0 5%;
-  margin: 0 80px 100px;
+  margin: 0 auto;
   position: relative;
+  max-width: 1500px;
 }
 main .container .contents h2 {
   font-family: "YUniverse-B";
@@ -32,11 +33,10 @@ main .container .flex_review {
   position: relative;
   top: 50px;
   color: #fff;
-  width: 100%;
 }
 main .container .flex_review .main .box {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 }
 main .container .flex_review .main .box .flex {
   width: 80%;
@@ -107,6 +107,9 @@ main .container .flex_review .main .box .flex_goods img {
 
 /* 리스트 부분 css */
 
+main .container .widget_sub {
+  width: 1500px;
+}
 main .container .widget_sub .widget_board {
   padding: 50px auto;
   margin: 50px auto;
