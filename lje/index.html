@@ -3,16 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <title>index</title>
         <!-- minireset -->
         <link rel="stylesheet" href="../common/minireset.min.css">
+        <!-- css swiperreset  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
         <!-- font -->
         <link rel="stylesheet" href="../fonts/font.css">
         <!-- 검색창에 돋보기 아이콘 -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <!-- css, js -->
+        <!-- css -->
         <link rel="stylesheet" href="./index.css">
+        <!-- js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
         <script defer src="./index.js"></script>
     </head>
     <body>
@@ -112,245 +116,221 @@
             </div>
         </header>
         <main>
-            <div class="main_Slide">
-                <div class="Slide_shampoo">
-                    <ul>
-                        <!-- 0 -->
-                        <li>
-                            <div class="main_box">
-                                <div class="shampoo">
-                                    <div class="shampoo_box">
-                                        <a href="" target="_blank">
-                                            <img src="../imgs/index/joeun-pure-calming-water-mist.png" alt="joeun-pure-calming-water-mist">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="textbox">
-                                    <div class="txt">
-                                        <p class="star">★★★★★ 5/5</p>
-                                        <p class="nameEng">
-                                            Joeun<br>
-                                            Pure Calming<br>
-                                            Water Mist
-                                        </p>
-                                        <p class="nameKo">좋은 퓨어 카밍 워터 미스트</p>
-                                        <p class="description">
-                                            닥터모두만의 진정 특허성분을 담은<br>
-                                            워터 미스트
-                                        </p>
-                                        <p class="readMore">
-                                            <a href="">
-                                                Read More
-                                                <i class="arrow"></i>
-                                            </a>
-                                        </p>
-                                    </div>
+            <div id="main_swiper" class="mianSwiper"><!-- swiper슬라이더 메인컨테이너 -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper"><!-- 보여지는 영역 -->
+                        <!-- --------1--------- -->
+                        <div class="swiper-slide">
+                            <div class="main_txtbox">
+                                <div class="maintxt">
+                                    <p class="star" data-swiper-parallax="-300">★★★★★ 5/5</p>
+                                    <p class="nameEng" data-swiper-parallax="-300">Joeun<br>Pure Calming<br>Water Mist</p>
+                                    <p class="nameKo" data-swiper-parallax="-300">좋은 퓨어 카밍 워터 미스트</p>
+                                    <p class="description" data-swiper-parallax="-300">닥터모두만의 진정        특허성분을 담은<br>
+                                    워터 미스트</p>
+                                    <p class="readMore" data-swiper-parallax="-300"><a href="https://drmodoo.com/product/detail.html?product_no=12" target="_blank">
+                                        Read More
+                                        <i class="arrow"></i>
+                                    </a></p>
                                 </div>
                             </div>
-                        </li>
-                        <!-- 1 -->
-                        <li>
-                            <div class="main_box">
-                                <div class="shampoo">
-                                    <div class="shampoo_box">
-                                        <a href="">
-                                            <img src="../imgs/index/professional-vegan-scalp-shampoo.png" alt="professional-vegan-scalp-shampoo">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="textbox">
-                                    <div class="txt">
-                                        <p class="star">★★★★★ 4.9/5</p>
-                                        <p class="nameEng">
-                                            Professional<br>
-                                            Vegan Scalp<br>
-                                            Shampoo
-                                        </p>
-                                        <p class="nameKo">좋은 프로페셔널 비건 스칼프 샴푸</p>
-                                        <p class="description">
-                                            닥터모두만의 원천 기술로 자연의 힘을 가득 담아내<br>
-                                            두피의 자생력을 강화시켜주는 샴푸
-                                        </p>
-                                        <p class="readMore">
-                                            <a href="">
-                                                Read More
-                                                <i class="arrow"></i>
-                                            </a>
-                                        </p>
-                                    </div>
+                            <div class="main_imgbox">
+                                <div class="mainSimg">
+                                    <a href="https://drmodoo.com/product/detail.html?product_no=12" target="_blank">
+                                        <img src="../imgs/index/joeun-pure-calming-water-mist.png" alt="joeun-pure-calming-water-mist" >
+                                    </a>
                                 </div>
                             </div>
-                        </li>
-                        <!-- 2 -->
-                        <li>
-                            <div class="main_box">
-                                <div class="shampoo">
-                                    <div class="shampoo_box">
-                                        <a href="">
-                                            <img src="../imgs/index/professional-waterful-dual-vegan-hair-treatment.png" alt="professional-waterful-dual-vegan-hair-treatment">
+                        </div>
+                        <!-- --------2--------- -->
+                        <div class="swiper-slide">
+                            <div class="main_txtbox">
+                                <div class="maintxt">
+                                    <p class="star" data-swiper-parallax="-300">★★★★★ 4.9/5</p>
+                                    <p class="nameEng" data-swiper-parallax="-300">
+                                        Professional<br>
+                                        Vegan Scalp<br>
+                                        Shampoo
+                                    </p>
+                                    <p class="nameKo" data-swiper-parallax="-300">좋은 프로페셔널 비건 스칼프 샴푸</p>
+                                    <p class="description" data-swiper-parallax="-300">
+                                        닥터모두만의 원천 기술로 자연의 힘을 가득 담아내<br>
+                                        두피의 자생력을 강화시켜주는 샴푸
+                                    </p>
+                                    <p class="readMore" data-swiper-parallax="-300">
+                                        <a href="https://drmodoo.com/product/detail.html?product_no=14" target="_blank">
+                                            Read More
+                                            <i class="arrow"></i>
                                         </a>
-                                    </div>
-                                </div>
-                                <div class="textbox">
-                                    <div class="txt">
-                                        <p class="star">★★★★★ 5/5</p>
-                                        <p class="nameEng">
-                                            Professional<br>
-                                            Waterful Dual Vegan<br>
-                                            Hair Treatment
-                                        </p>
-                                        <p class="nameKo">좋은 프로페셔널 워터풀 듀얼 비건 헤어 트리트먼트</p>
-                                        <p class="description">
-                                            크림 제형과 리퀴드 제형의 장점만을 모아 합친<br>
-                                            고농축 수분 베이스 제형의 트리트먼트
-                                        </p>
-                                        <p class="readMore">
-                                            <a href="">
-                                                Read More
-                                                <i class="arrow"></i>
-                                            </a>
-                                        </p>
-                                    </div>
+                                    </p>
                                 </div>
                             </div>
-                        </li>
-                        <!-- 3 -->
-                        <li>
-                            <div class="main_box">
-                                <div class="shampoo">
-                                    <div class="shampoo_box">
-                                        <a href="">
-                                            <img src="../imgs/index/professional-scalp-relief-hair-tonic.png" alt="professional-scalp-relief-hair-tonic">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="textbox">
-                                    <div class="txt">
-                                        <p class="star">★★★★★ 5/5</p>
-                                        <p class="nameEng">
-                                            Professional<br>
-                                            Scalp Relief<br>
-                                            Hair Tonic
-                                        </p>
-                                        <p class="nameKo">좋은 프로페셔널 비건 스칼프 릴리프 헤어 토닉</p>
-                                        <p class="description">
-                                            닥터모두만의 원천 기술로 탄생한<br>
-                                            두피 수분길을 열어주는 헤어토닉
-                                        </p>
-                                        <p class="readMore">
-                                            <a href="">
-                                                Read More
-                                                <i class="arrow"></i>
-                                            </a>
-                                        </p>
-                                    </div>
+                            <div class="main_imgbox">
+                                <div class="mainSimg">
+                                    <a href="https://drmodoo.com/product/detail.html?product_no=14" target="_blank">
+                                        <img src="../imgs/index/professional-vegan-scalp-shampoo.png" alt="professional-vegan-scalp-shampoo">
+                                    </a>
                                 </div>
                             </div>
-                        </li>
-                        <!-- 4 -->
-                        <li>
-                            <div class="main_box">
-                                <div class="shampoo">
-                                    <div class="shampoo_box">
-                                        <a href="">
-                                            <img src="../imgs/index/professional-vegan-scalp-cooling.png" alt="professional-vegan-scalp-cooling">
+                        </div>
+                        <!-- --------3--------- -->
+                        <div class="swiper-slide">
+                            <div class="main_txtbox">
+                                <div class="maintxt">
+                                    <p class="star" data-swiper-parallax="-300">★★★★★ 5/5</p>
+                                    <p class="nameEng" data-swiper-parallax="-300">
+                                        Professional<br>
+                                        Waterful Dual Vegan<br>
+                                        Hair Treatment
+                                    </p>
+                                    <p class="nameKo" data-swiper-parallax="-300">좋은 프로페셔널 워터풀 듀얼 비건 헤어 트리트먼트</p>
+                                    <p class="description" data-swiper-parallax="-300">
+                                        크림 제형과 리퀴드 제형의 장점만을 모아 합친<br>
+                                        고농축 수분 베이스 제형의 트리트먼트
+                                    </p>
+                                    <p class="readMore" data-swiper-parallax="-300">
+                                        <a href="https://drmodoo.com/product/detail.html?product_no=13" target="_blank">
+                                            Read More
+                                            <i class="arrow"></i>
                                         </a>
-                                    </div>
-                                </div>
-                                <div class="textbox">
-                                    <div class="txt">
-                                        <p class="star">★★★★★ 5/5</p>
-                                        <p class="nameEng">
-                                            Professional<br>
-                                            Vegan Scalp<br>
-                                            Cooling Ampoule
-                                        </p>
-                                        <p class="nameKo">좋은 프로페셔널 비건 스칼프 쿨링 앰플</p>
-                                        <p class="description">
-                                            닥터모두만의 원천 기술로 탄생한<br>
-                                            두피 활력을 강화하는 쿨링 앰플
-                                        </p>
-                                        <p class="readMore">
-                                            <a href="">
-                                                Read More
-                                                <i class="arrow"></i>
-                                            </a>
-                                        </p>
-                                    </div>
+                                    </p>
                                 </div>
                             </div>
-                        </li>
-                        <!-- 5 -->
-                        <li>
-                            <div class="main_box">
-                                <div class="shampoo">
-                                    <div class="shampoo_box">
-                                        <a href="">
-                                            <img src="../imgs/index/joeun-pure-calming-water-mist.png" alt="joeun-pure-calming-water-mist">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="textbox">
-                                    <div class="txt">
-                                        <p class="star">★★★★★ 5/5</p>
-                                        <p class="nameEng">
-                                            Joeun<br>
-                                            Pure Calming<br>
-                                            Water Mist
-                                        </p>
-                                        <p class="nameKo">좋은 퓨어 카밍 워터 미스트</p>
-                                        <p class="description">
-                                            닥터모두만의 진정 특허성분을 담은<br>
-                                            워터 미스트
-                                        </p>
-                                        <p class="readMore">
-                                            <a href="">
-                                                Read More
-                                                <i class="arrow"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>  
-                        </li>
-                        <!-- 6 -->
-                        <li>
-                            <div class="main_box">
-                                <div class="shampoo">
-                                    <div class="shampoo_box">
-                                        <a href="">
-                                            <img src="../imgs/index/professional-vegan-scalp-shampoo.png" alt="professional-vegan-scalp-shampoo">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="textbox">
-                                    <div class="txt">
-                                        <p class="star">★★★★★ 4.9/5</p>
-                                        <p class="nameEng">
-                                            Professional<br>
-                                            Vegan Scalp<br>
-                                            Shampoo
-                                        </p>
-                                        <p class="nameKo">좋은 프로페셔널 비건 스칼프 샴푸</p>
-                                        <p class="description">
-                                            닥터모두만의 원천 기술로 자연의 힘을 가득 담아내<br>
-                                            두피의 자생력을 강화시켜주는 샴푸
-                                        </p>
-                                        <p class="readMore">
-                                            <a href="">
-                                                Read More
-                                                <i class="arrow"></i>
-                                            </a>
-                                        </p>
-                                    </div>
+                            <div class="main_imgbox">
+                                <div class="mainSimg">
+                                    <a href="https://drmodoo.com/product/detail.html?product_no=13" target="_blank">
+                                        <img src="../imgs/index/professional-waterful-dual-vegan-hair-treatment.png" alt="professional-waterful-dual-vegan-hair-treatment">
+                                    </a>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                    <div class="shampoo_prevbtn"></div>
-                    <div class="shampoo_nextbtn"></div>
-                    <span></span>
+                        </div>
+                        <!-- --------4--------- -->
+                        <div class="swiper-slide">
+                            <div class="main_txtbox">
+                                <div class="maintxt">
+                                    <p class="star" data-swiper-parallax="-300">★★★★★ 5/5</p>
+                                    <p class="nameEng" data-swiper-parallax="-300">
+                                        Professional<br>
+                                        Scalp Relief<br>
+                                        Hair Tonic
+                                    </p>
+                                    <p class="nameKo" data-swiper-parallax="-300">좋은 프로페셔널 비건 스칼프 릴리프 헤어 토닉</p>
+                                    <p class="description" data-swiper-parallax="-300">
+                                        닥터모두만의 원천 기술로 탄생한<br>
+                                        두피 수분길을 열어주는 헤어토닉
+                                    </p>
+                                    <p class="readMore" data-swiper-parallax="-300">
+                                        <a href="https://drmodoo.com/product/detail.html?product_no=19" target="_blank">
+                                            Read More
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="main_imgbox">
+                                <div class="mainSimg">
+                                    <a href="https://drmodoo.com/product/detail.html?product_no=19" target="_blank"> 
+                                        <img src="../imgs/index/professional-scalp-relief-hair-tonic.png" alt="professional-scalp-relief-hair-tonic">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- --------5--------- -->
+                        <div class="swiper-slide">
+                            <div class="main_txtbox">
+                                <div class="maintxt">
+                                    <p class="star" data-swiper-parallax="-300">★★★★★ 5/5</p>
+                                    <p class="nameEng" data-swiper-parallax="-300">
+                                        Professional<br>Vegan Scalp<br>Cooling Ampoule</p>
+                                    <p class="nameKo" data-swiper-parallax="-300">좋은 프로페셔널 비건 스칼프 쿨링 앰플</p>
+                                    <p class="description" data-swiper-parallax="-300">
+                                        닥터모두만의 원천 기술로 탄생한<br>
+                                        두피 활력을 강화하는 쿨링 앰플
+                                    </p>
+                                    <p class="readMore" data-swiper-parallax="-300">
+                                        <a href="https://drmodoo.com/product/detail.html?product_no=15" target="_blank">
+                                            Read More
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="main_imgbox">
+                                <div class="mainSimg">
+                                    <a href="https://drmodoo.com/product/detail.html?product_no=15" target="_blank">
+                                        <img src="../imgs/index/professional-vegan-scalp-cooling.png" alt="professional-vegan-scalp-cooling">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- --------6--------- -->
+                        <div class="swiper-slide">
+                            <div class="main_txtbox">
+                                <div class="maintxt">
+                                    <p class="star" data-swiper-parallax="-300">★★★★★ 5/5</p>
+                                    <p class="nameEng" data-swiper-parallax="-300">
+                                        Joeun<br>
+                                        Pure Calming<br>
+                                        Water Mist
+                                    </p>
+                                    <p class="nameKo" data-swiper-parallax="-300">좋은 퓨어 카밍 워터 미스트</p>
+                                    <p class="description" data-swiper-parallax="-300">
+                                        닥터모두만의 진정 특허성분을 담은<br>
+                                        워터 미스트
+                                    </p>
+                                    <p class="readMore" data-swiper-parallax="-300">
+                                        <a href="https://drmodoo.com/product/detail.html?product_no=12" target="_blank">
+                                            Read More
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="main_imgbox">
+                                <div class="mainSimg">
+                                    <a href="https://drmodoo.com/product/detail.html?product_no=12" target="_blank">
+                                        <img src="../imgs/index/joeun-pure-calming-water-mist.png" alt="joeun-pure-calming-water-mist">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- --------7--------- -->
+                        <div class="swiper-slide">
+                            <div class="main_txtbox">
+                                <div class="maintxt">
+                                    <p class="star" data-swiper-parallax="-300">★★★★★ 4.9/5</p>
+                                    <p class="nameEng" data-swiper-parallax="-300">
+                                        Professional<br>
+                                        Vegan Scalp<br>
+                                        Shampoo
+                                    </p>
+                                    <p class="nameKo" data-swiper-parallax="-300">좋은 프로페셔널 비건 스칼프 샴푸</p>
+                                    <p class="description" data-swiper-parallax="-300">
+                                        닥터모두만의 원천 기술로 자연의 힘을 가득 담아내<br>
+                                        두피의 자생력을 강화시켜주는 샴푸
+                                    </p>
+                                    <p class="readMore" data-swiper-parallax="-300">
+                                        <a href="https://drmodoo.com/product/detail.html?product_no=14" target="_blank">
+                                            Read More
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="main_imgbox">
+                                <div class="mainSimg">
+                                    <a href="https://drmodoo.com/product/detail.html?product_no=14" target="_blank">
+                                        <img src="../imgs/index/professional-vegan-scalp-shampoo.png" alt="professional-vegan-scalp-shampoo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- <div class="swiper-pagination"></div> -->
+                <!-- 방향버튼 -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
             <div class="main_review"></div>
             <div class="main_reorga"></div>
