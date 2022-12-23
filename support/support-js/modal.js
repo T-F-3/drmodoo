@@ -5,6 +5,7 @@ const naverBtn = document.querySelector('.naver_btn');
 const phone = document.querySelector('.phone_box');
 const sidebar = document.querySelector('#sidebar_container');
 const sidebarBtn = document.querySelector('.side_btn');
+const btnCheck = document.querySelector('.btn_check');
 
 gybbpr.addEventListener('click', () => {
    counseApp.classList.add('on');
@@ -31,4 +32,8 @@ phone.addEventListener('mouseout', () => {
 
 sidebarBtn.addEventListener('click', () => {
    sidebar.classList.toggle('open');
+});
+
+btnCheck.addEventListener('click', e => {
+   alert('비밀글 비밀번호가 틀립니다.');
 });
