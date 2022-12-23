@@ -10,164 +10,173 @@
         <style>
             /* -----footer------ */
             footer {
-                margin: 0 auto 0;
-                position: relative;
-                padding: 0 0 150px;
-                background: url(../imgs/index/foot_bg.jpg) repeat center;
-                background-size: cover;
-                clear: both;
-                overflow: hidden;
-                color: #fff;
-                font-family: 'Noto Sans KR','YUniverse-B', 돋움, sans-serif;
-            }
-            footer a {
-                color: #fff;
-                text-decoration: none;
-            }
-            footer .footer_textbox1 {
-                margin: 0 auto;
-                padding: 100px 5%;
-                background-color: #000;
-            }
-            footer .footer_textbox1>h2 {
-                margin: 0 0 50px;
-                font-weight: 500;
-            }
-            footer .footer_textbox1>h2 a img {
-                width: auto; 
-                height: auto;
-                border: none;
-                vertical-align: top;
-            }
-            footer .footer_textbox1 ul {
-                position: relative;
-                margin: 0 auto;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                text-align: left;
-                clear: both;
-                overflow: hidden;
-                line-height: 2;
-            }
-            footer .footer_textbox1 ul li.footer_box {
-                width: 50%;
-            }
-            footer .footer_textbox1 ul li {
-                position: relative;
-                display: inline-block;
-                box-sizing: border-box;
-                vertical-align: top;
-            }
-            footer .footer_textbox1 ul li p {
-                font-size: 14px;
-                line-height: 2.2;
-                font-weight: 300;
-            }
-            footer .footer_textbox1 ul li h2 {
-                margin: 0 0 10px;
-                font-size: 1.8rem;
-                font-family: 'YUniverse-B';
-                font-weight: 500;
-            }
-            footer .footer_textbox1 ul li span {
-                position: relative;
-                display: inline-block;
-                margin-right: 10px;
-                padding-right: 10px;
-            }
-            footer .footer_textbox1 ul li p .footer_before::before {
-                content: "";
-                position: absolute;
-                right: 0px; top: 17px;
-                transform: translateY(-50%);
-                display: block;
-                width: 1px;
-                height: 12px;
-                background-color: #555;
-            }
-            footer .footer_textbox1 ul li.footer_guide {
-                width: 25%;
-                padding: 0 2.5%;
-            }
-            footer .footer_textbox1 ul li .footer_address {
-                display: block;
-                margin-top: 20px;
-            }
-            footer .footer_textbox1 ul li .footer_address span {
-                font-weight: 500;
-                padding: 0;
-                margin: 0;
-            }
-            footer .footer_guide p {
-                position: relative;
-                padding: 10px 0;
-                border-bottom: 1px #fff solid;
-            }
-            footer .footer_guide p a {
-                display: block;
-            }
-            footer .footer_guide i.arrow {
-                position: absolute;
-                top: 55%;
-                transform: translateY(-50%);
-                right: 0;
-                margin: 0;
-                display: inline-block;
-                width: 24px;
-                height: 10px;
-                vertical-align: middle;
-            }
-            footer .footer_guide i.arrow::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                width: 100%;
-                height: 1px;
-                background-color: rgba(255,255,255,.8);
-            }
-            footer .footer_guide i.arrow::after {
-                content: "";
-                position: absolute;
-                top: 9px;
-                right: -5px;
-                display: block;
-                width: 12px;
-                height: 1px;
-                background-color: rgba(255,255,255,.8);
-                transform: rotate(-50deg);
-                transform-origin: top left;
-            }
-            footer .footer_textbox2 {
-                position: absolute;
-                left: 5%;
-                right: 5%;
-                bottom: 0;
-                display: flex;
-                height: auto;
-                font-size: 14px;
-                line-height: 150px;
-                box-sizing: border-box;
-                flex-flow: row nowrap;
-                -webkit-box-align: center;
-                align-items: center;
-                -webkit-box-pack: start;
-                justify-content: start;
-            }
-            footer .footer_textbox2 span {
-                display: inline-block;
-                margin-right: 5%;
-                font-size: 1.2rem;
-            }
-            footer .footer_textbox2 span:last-child {
-                margin-right: 0;
-            }
-            footer .footer_textbox2 .footer_contact {
-                font-size: 1.8rem;
-                font-family: 'YUniverse-B';
-            }
+    margin: 0 auto 0;
+    position: relative;
+    padding: 0 0 150px;
+    background: url(../imgs/index/foot_bg.jpg) repeat center;
+    background-size: cover;
+    clear: both;
+    overflow: hidden;
+    color: #fff;
+    font-family: 'Noto Sans KR','YUniverse-B', 돋움, sans-serif;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+footer .footer_textbox1 {
+    margin: 0 auto;
+    padding: 90px 5%;
+    background-color: #000;
+}
+footer .footer_textbox1>h2 {
+    margin: 0 0 50px;
+    font-weight: 500;
+}
+footer .footer_textbox1>h2 a img {
+    width: auto; 
+    height: auto;
+    border: none;
+    vertical-align: top;
+}
+footer .footer_textbox1 ul {
+    position: relative;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.8fr .97fr .1fr;
+    text-align: left;
+    clear: both;
+    overflow: hidden;
+    line-height: 2.5;
+}
+footer .footer_textbox1 ul li.footer_box {
+    /* width: 50%; */
+}
+footer .footer_textbox1 ul li {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+footer .footer_textbox1 ul li p {
+    font-size: 14px;
+    line-height: 2.3;
+    font-weight: 300;
+}
+footer .footer_textbox1 ul li h2 {
+    margin: 0 0 5px;
+    font-size: 1.8rem;
+    font-family: 'YUniverse-B';
+    font-weight: 500;
+    /* letter-spacing: 1px; */
+}
+footer .footer_textbox1 ul li span {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+footer .footer_textbox1 ul li p .footer_before::before {
+    content: "";
+    position: absolute;
+    right: 0px; top: 17px;
+    transform: translateY(-50%);
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: #555;
+}
+footer .footer_textbox1 ul li.footer_guide {
+    width: 65%;
+    padding: 0 2.5%;
+    line-height: 2;
+}
+footer .footer_textbox1 ul li.footer_guide h2 {
+    margin-bottom: 10px;
+}
+footer .footer_textbox1 ul li.footer_guide p {
+    line-height: 2;
+}
+footer .footer_textbox1 ul li .footer_address {
+    display: block;
+    margin-top: 20px;
+}
+footer .footer_textbox1 ul li .footer_address span {
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+footer .footer_guide p {
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px #fff solid;
+}
+footer .footer_guide p a {
+    display: block;
+}
+footer .footer_guide i.arrow {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 0;
+    margin: 0;
+    display: inline-block;
+    width: 24px;
+    height: 10px;
+    vertical-align: middle;
+}
+footer .footer_guide i.arrow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255,255,255,.8);
+}
+footer .footer_guide i.arrow::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -5px;
+    display: block;
+    width: 12px;
+    height: 1px;
+    background-color: rgba(255,255,255,.8);
+    transform: rotate(-50deg);
+    transform-origin: top left;
+}
+footer .footer_textbox2 {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    display: flex;
+    height: auto;
+    font-size: 14px;
+    line-height: 150px;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    font-weight: 100;
+}
+footer .footer_textbox2>span {
+    display: inline-block;
+    margin-right: 5%;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+footer .footer_textbox2 span:last-child {
+    margin-right: 0;
+}
+footer .footer_textbox2>.footer_contact {
+    font-size: 1.8rem;
+    font-family: 'YUniverse-B';
+}
         </style>        
     </head>
     <body>

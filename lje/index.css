@@ -394,7 +394,7 @@ footer a {
 }
 footer .footer_textbox1 {
     margin: 0 auto;
-    padding: 100px 5%;
+    padding: 90px 5%;
     background-color: #000;
 }
 footer .footer_textbox1>h2 {
@@ -410,16 +410,15 @@ footer .footer_textbox1>h2 a img {
 footer .footer_textbox1 ul {
     position: relative;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1.8fr .97fr .1fr;
     text-align: left;
     clear: both;
     overflow: hidden;
-    line-height: 2;
+    line-height: 2.5;
 }
 footer .footer_textbox1 ul li.footer_box {
-    width: 50%;
+    /* width: 50%; */
 }
 footer .footer_textbox1 ul li {
     position: relative;
@@ -429,14 +428,15 @@ footer .footer_textbox1 ul li {
 }
 footer .footer_textbox1 ul li p {
     font-size: 14px;
-    line-height: 2.2;
+    line-height: 2.3;
     font-weight: 300;
 }
 footer .footer_textbox1 ul li h2 {
-    margin: 0 0 10px;
+    margin: 0 0 5px;
     font-size: 1.8rem;
     font-family: 'YUniverse-B';
     font-weight: 500;
+    /* letter-spacing: 1px; */
 }
 footer .footer_textbox1 ul li span {
     position: relative;
@@ -455,8 +455,15 @@ footer .footer_textbox1 ul li p .footer_before::before {
     background-color: #555;
 }
 footer .footer_textbox1 ul li.footer_guide {
-    width: 25%;
+    width: 65%;
     padding: 0 2.5%;
+    line-height: 2;
+}
+footer .footer_textbox1 ul li.footer_guide h2 {
+    margin-bottom: 10px;
+}
+footer .footer_textbox1 ul li.footer_guide p {
+    line-height: 2;
 }
 footer .footer_textbox1 ul li .footer_address {
     display: block;
@@ -523,16 +530,18 @@ footer .footer_textbox2 {
     align-items: center;
     -webkit-box-pack: start;
     justify-content: start;
+    font-weight: 100;
 }
-footer .footer_textbox2 span {
+footer .footer_textbox2>span {
     display: inline-block;
     margin-right: 5%;
     font-size: 1.2rem;
+    font-weight: 300;
 }
 footer .footer_textbox2 span:last-child {
     margin-right: 0;
 }
-footer .footer_textbox2 .footer_contact {
+footer .footer_textbox2>.footer_contact {
     font-size: 1.8rem;
     font-family: 'YUniverse-B';
 }
