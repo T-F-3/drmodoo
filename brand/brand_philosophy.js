@@ -17,13 +17,35 @@
         const Navbg = document.querySelector('.nav_left');
             scrollY > 90 ? Navbg.style.width = '100%' : Navbg.style.width = '50%';
 
+            // console.log(scrollY)
+
      });
-    
-    $(function() {
-    $(".brand_label").simplyScroll({
-        pauseOnHover:false
-    });
-});
+
+
+
+// 토글버튼
+
+
+/* const btn = document.querySelector('.expandbtn')
+const certificateIn = document.querySelector('.certificatein1')
+
+btn.addEventListener('click',()=>{
+    certificateIn.style.display='none'
+}) 
+ */
+let certificateBtn = document.querySelectorAll('.material-symbols-outlined')
+let certificateIn = document.querySelectorAll('.safety_certificate_in')
+
+
+for(let i =0; i < certificateBtn.length; i++){
+  certificateBtn[i+1].addEventListener('click',function(){
+    certificateBtn[i+1].classList.toggle('active');
+    certificateIn[i].classList.toggle('active');
+  })
+}
+
+
+
 
 //    헤더 js
 (function headerSlide() {

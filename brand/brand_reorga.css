@@ -544,15 +544,19 @@ text-align: left;
 .Complex > ul > li{
     width: 694px;
     padding: 30px;
-    height: 256px;
     border-top: 1px solid #A6A6A6;
 }
 
-.Complex ul >li>ul{
+.Complex div{
     font-size: 24px;
     color:#A6A6A6;
     font-weight: 300;
     padding: 20px 0;
+    display: none;
+}
+
+.Complex div.active{
+    display: block;
 }
 
 .Complex_txt {
@@ -563,6 +567,10 @@ text-align: left;
     color: #A6A6A6;
     position: absolute;
     right: 0;
+}
+
+.material-symbols-outlined.active {
+    transform: rotateX(180deg)
 }
 
 .inimg {
@@ -577,19 +585,19 @@ text-align: left;
     top:175px; 
 }
 .inimg2 {
-    top: 430px;
+    top: 320px;
 }
 .inimg3 {
-    top: 700px;
+    top: 450px;
 }
 .inimg4 {
-    bottom: 800px;
+    bottom: 430px;
 }
 .inimg5 {
-    bottom: 550px;
+    bottom: 270px;
 }
 .inimg6 {
-    bottom:300px
+    bottom: 140px
 }
 /*******************************************/
 
