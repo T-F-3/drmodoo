@@ -571,6 +571,7 @@ text-align: left;
     color: #A6A6A6;
     position: absolute;
     right: 0;
+    cursor: pointer;
 }
 
 .material-symbols-outlined.active {
