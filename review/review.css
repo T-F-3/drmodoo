@@ -313,7 +313,7 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 0;
+  top: 3px;
   left: 150px;
   line-height: 1;
   color: #91949c;
