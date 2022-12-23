@@ -181,6 +181,7 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   margin-top: 293px;
   font-weight: 500;
   line-height: 135px;
+  color: #000;
 }
 .flex_review {
   display: grid;
@@ -213,7 +214,6 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   background: url(../imgs/Review/review7.jpg) no-repeat 50% / cover;
   border-radius: 15px;
 }
-
 .flex_review .main .box {
   display: flex;
   width: 100%;
@@ -227,30 +227,32 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   cursor: pointer;
   line-height: 1.5;
   position: relative;
-  filter: brightness(0.85);
+  border: 1px solid #e5e5e5;
 }
-
-.flex_review .main .box::after {
+.flex_review .main .box::before {
   content: "";
-  position: absolute;
   width: 100%;
   height: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: -9999;
+  opacity: 0.3;
+  background-color: #000;
+  border-radius: 15px;
 }
 .flex_review .main .box .flex {
   width: 80%;
+  opacity: 1;
   margin: 0 auto;
   color: #fff;
-  z-index: 9999;
+  z-index: 999;
 }
 .flex_review .main .box:hover .flex {
   opacity: 0;
   transition: 0.3s;
 }
-.flex_review .main .box:hover {
-  filter: brightness(1);
+.flex_review .main .box:hover.box::before {
+  opacity: 0;
 
   transition: 0.3s;
 }
