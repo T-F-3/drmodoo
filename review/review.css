@@ -792,13 +792,12 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   /* width: 100%; */
   margin: 0 6px;
   margin-bottom: 10px;
-
+  border-radius: 15px;
   transition: all 0.5s;
   cursor: pointer;
 }
 .ask_container:hover {
   background-color: rgba(0, 0, 0, 0.03);
-  border-radius: 15px;
 }
 .ask_container .chat_img {
   padding: 8px 0 0 6px;
