@@ -40,6 +40,11 @@
 
             console.log(scrollY)
 
+            if(scrollY>=850){
+                txtp.style.color='#000'
+            }else{
+                txtp.style.color='white'
+            }
      });
     
 

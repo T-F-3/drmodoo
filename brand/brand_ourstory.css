@@ -184,8 +184,7 @@ header {
     overflow: hidden;
     text-transform: capitalize;
     max-width: 100%;
-    position: relative;
-    min-height: 80vh;
+    min-height: calc(100vh - 136px);
 }
 
 header .Headerimgbox {

@@ -194,7 +194,7 @@ header .Headerimgbox {
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    position: relative;
+    min-height: calc(100vh - 136px);
 }
 
 /* 메인이미지 사진
