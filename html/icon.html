@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>제목</title>
+      <link rel="stylesheet" href="../common/minireset.min.css" />
+
+      <link
+         rel="stylesheet"
+         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+      />
+
+      <script src="https://kit.fontawesome.com/efc7dcc9f4.js" crossorigin="anonymous"></script>
+      <!-- 구글폰트와 폰트어썸 둘 다 복사해가주세요~!!  -->
+      <style>
+         body {
+            background-color: rgb(243, 184, 184);
+            font-family: 'NotoSansKR', 'NotoSansJP', '-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue',
+               '맑은 고딕', 'Yu Gothic', 'Segoe UI', 'Roboto', 'system-ui', 'sans-serif';
+            height: 200vh;
+         }
+         /* 우측 하단 아이콘 */
+         .gybbpr {
+            z-index: 999;
+            position: fixed;
+            bottom: 20px;
+            right: 50px;
+            width: 60px;
+            height: 60px;
+            border-radius: 26px;
+            background-color: rgb(255, 255, 255, 0.9);
+            box-shadow: rgb(255 255 255 / 12%) 0px 0px 2px 0px inset, rgb(0 0 0 / 5%) 0px 0px 2px 1px,
+               rgb(0 0 0 / 22%) 0px 4px 20px;
+
+            transition: all 0.3s;
+            cursor: pointer;
+            opacity: 1;
+         }
+         .gybbpr.off {
+            opacity: 0;
+            pointer-events: none;
+         }
+         .gybbpr:hover {
+            box-shadow: rgb(255 255 255 / 12%) 0px 0px 2px 0px inset, rgb(0 0 0 / 5%) 0px 0px 2px 1px,
+               rgb(0 0 0 / 30%) 0px 6px 40px;
+            background: rgba(255, 255, 255, 0.9);
+         }
+         .span_box .day_text {
+            font-size: 11px;
+            color: rgba(0, 0, 0, 0.4);
+         }
+         .span_box .name_text {
+            font-size: 13px;
+            font-weight: bold;
+         }
+         .textbox_circle,
+         .signal_circle {
+            width: 20px;
+            height: 20px;
+            background-color: rgb(233, 78, 88);
+            color: white;
+            font-size: 13px;
+            text-align: center;
+            border-radius: 50%;
+         }
+         .gybbpr .gybbpr_circle {
+            background-color: #e94e58;
+            color: white;
+            box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 1px, rgb(0 0 0 / 8%) 0px 1px 2px,
+               rgb(255 255 255 / 12%) 0px 0px 2px inset;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            border-radius: 12px;
+            position: absolute;
+            right: 0;
+            top: -7px;
+            font-size: 14px;
+         }
+         .gybbpr img {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 50%;
+            right: 50%;
+            transform: translate(52%, -50%);
+         }
+         .icon_box img {
+            width: 36px;
+            height: 36px;
+         }
+         /* -------------아이콘 클릭시 팝업창 -------------- */
+         .counseApp {
+            text-align: left;
+            z-index: 9999;
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            height: 680px;
+            width: 370px;
+            background-color: #efefef;
+            border-radius: 24px;
+            box-shadow: 0.7px 0px 2.2px rgba(0, 0, 0, 0.026), 1.8px 0px 5.3px rgba(0, 0, 0, 0.05),
+               3.4px 0px 10px rgba(0, 0, 0, 0.073), 6px 0px 17.9px rgba(0, 0, 0, 0.096),
+               11.3px 0px 33.4px rgba(0, 0, 0, 0.118), 27px 0px 80px rgba(0, 0, 0, 0.16);
+
+            display: none;
+         }
+         .counseApp.on {
+            display: block;
+         }
+         .counseApp .counsenav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding-right: 14px;
+            padding-left: 22px;
+            height: 60px;
+         }
+         .counseApp .counsenav .counsenav_wrap {
+            display: flex;
+            align-items: center;
+         }
+         .counseApp .counsenav .counsenav_container {
+            display: flex;
+            align-items: center;
+         }
+         .counseApp .counsenav .counsenav_container .gear,
+         .xmark {
+            color: rgb(3, 78, 95);
+            font-size: 20px;
+
+            cursor: pointer;
+         }
+         .counseApp .counsenav .counsenav_container .gear {
+            margin-right: 20px;
+            font-size: 18px;
+         }
+         .counseApp .counsenav .counsenav_wrap span {
+            font-size: 18px;
+            margin: 0 0 0 8px;
+            font-weight: bold;
+         }
+         .counseApp .counsenav img {
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+         }
+         .counseApp .counsemain {
+            position: relative;
+            padding: 0px 14px 20px;
+         }
+         .counseApp .counsemain .counsemain_container {
+            box-shadow: rgb(255 255 255 / 12%) 0px 0px 2px 0px inset, rgb(0 0 0 / 5%) 0px 0px 2px 1px,
+               rgb(0 0 0 / 8%) 0px 2px 6px;
+            padding: 12px 0 6px;
+
+            background-color: white;
+            border-radius: 18px;
+
+            width: 342px;
+            height: 190px;
+
+            margin-top: 20px;
+
+            transform: translateY(10px);
+            opacity: 0;
+            animation: ani1 0.4s 0.3s ease-in-out forwards;
+         }
+         .counseApp .counsemain .counse_list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 14px 2px;
+         }
+         .counseApp .counsemain .counse_list:hover {
+            color: rgba(0, 0, 0, 0.85);
+         }
+         .counseApp .counsemain .counse_list span {
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.4);
+         }
+         .counseApp .counsemain .counse_list .material-symbols-outlined {
+            font-size: 16px;
+         }
+         .counseApp .counsemain .couse_check {
+            display: flex;
+            align-items: center;
+
+            cursor: pointer;
+         }
+         .counseApp .counsemain .counse_list .all {
+            color: #00000099;
+         }
+
+         /* 팝업창 이너박스 */
+         .chat_container {
+            height: 76px;
+
+            margin: 0 6px;
+
+            display: flex;
+            align-items: center;
+
+            cursor: pointer;
+            transition: all 0.5s;
+         }
+         .chat_container:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+            border-radius: 15px;
+         }
+         .chat_container .chat_img {
+            width: 52px;
+            padding: 0 0 0 6px;
+         }
+         .chat_img img {
+            width: 36px;
+            height: 36px;
+            border-radius: 15px;
+         }
+         .chat_container .chat_box {
+            width: 246px;
+            padding: 8px 0 12px;
+         }
+
+         .chat_container .chat_box .chat_top {
+            font-size: 13px;
+            font-weight: bold;
+         }
+         .chat_container .chat_box .chat_bottom {
+            font-size: 15px;
+         }
+         .chat_container .chat_box .chat_top span {
+            font-size: 11px;
+            margin-left: 4px;
+            color: rgba(0, 0, 0, 0.4);
+         }
+         .chat_container .chat_icon {
+            width: 52px;
+            display: flex;
+
+            align-items: center;
+         }
+         /* -------------질문하기란----------------- */
+         .ask_wrapper {
+            margin-top: 14px;
+            padding: 6px 0;
+            width: 342px;
+            height: 170px;
+            box-shadow: rgb(255 255 255 / 12%) 0px 0px 2px 0px inset, rgb(0 0 0 / 5%) 0px 0px 2px 1px,
+               rgb(0 0 0 / 8%) 0px 2px 6px;
+            background-color: white;
+            border-radius: 18px;
+
+            transform: translateY(10px);
+            opacity: 0;
+            animation: ani1 0.7s 0.4s ease-in-out forwards;
+         }
+         .ask_wrapper .ask_btn {
+            width: 286px;
+            padding: 14px;
+            background: rgba(0, 0, 0, 0.05);
+            margin: 0 auto;
+            font-weight: bold;
+            opacity: 1;
+            border-radius: 17px;
+
+            display: flex;
+            justify-content: center;
+
+            cursor: pointer;
+         }
+         .ask_wrapper .ask_btn:hover {
+            background-color: rgba(0, 0, 0, 0.08);
+         }
+         .ask_wrapper .ask_btn a {
+            text-decoration: none;
+            color: inherit;
+         }
+         .ask_wrapper .ask_btn .btn {
+            display: flex;
+            align-items: center;
+         }
+         .ask_wrapper .ask_btn .btn span {
+            margin-right: 4px;
+            color: rgba(0, 0, 0, 0.85);
+         }
+         .ask_container {
+            display: flex;
+            justify-content: center;
+            height: 67px;
+            /* width: 100%; */
+            margin: 0 6px;
+            margin-bottom: 10px;
+
+            transition: all 0.5s;
+            cursor: pointer;
+         }
+         .ask_container:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+            border-radius: 15px;
+         }
+         .ask_container .chat_img {
+            padding: 8px 0 0 6px;
+            margin-right: 8px;
+            height: 50px;
+         }
+         .ask_container .chat_box {
+            width: 280px;
+            padding: 8px 0 12px;
+            height: 70px;
+         }
+         .ask_container .chat_box .chat_top {
+            font-size: 13px;
+            font-weight: bold;
+         }
+         .ask_container .chat_box .chat_bottom {
+            padding: 0 0 12px 0;
+         }
+         .ask_wrapper .guide_txt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 5px;
+
+            cursor: inherit;
+         }
+         .ask_wrapper .guide_txt .material-symbols-outlined {
+            color: #31a552;
+            font-size: 20px;
+         }
+         .ask_wrapper .guide_txt .gtext {
+            font-size: 11px;
+            color: rgba(0, 0, 0, 0.6);
+         }
+         /* -----------다른곳으로 질문하기--------------- */
+         .another_ask {
+            height: 62px;
+            width: 100%;
+            margin-top: 14px;
+            padding: 0 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: rgb(255 255 255 / 12%) 0px 0px 2px 0px inset, rgb(0 0 0 / 5%) 0px 0px 2px 1px,
+               rgb(0 0 0 / 8%) 0px 2px 6px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 18px;
+            transform: translateY(10px);
+            opacity: 0;
+            animation: ani1 0.8s 0.5s ease-in-out forwards;
+         }
+
+         .another_ask p {
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.4);
+         }
+         .another_ask .another_ask_wrapper {
+            display: flex;
+         }
+         .another_ask img {
+            width: 36px;
+            height: 36px;
+            border-radius: 14px;
+            margin-right: 10px;
+
+            transition: all 0.5s;
+
+            cursor: pointer;
+         }
+         .another_ask img:hover {
+            transform: scale(1.1);
+         }
+         .another_ask .phone_box {
+            background-color: rgba(0, 0, 0, 0.05);
+            width: 36px;
+            height: 36px;
+            border-radius: 14px;
+            text-align: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: all 0.5s;
+
+            cursor: pointer;
+         }
+         .another_ask .phone_box:hover {
+            transform: scale(1.1);
+         }
+         .another_ask .phone_box i {
+            color: rgba(0, 0, 0, 0.4);
+         }
+         .another_ask #naver_talk {
+            display: none;
+            position: absolute;
+            right: 115px;
+            background-color: #333;
+            color: rgb(255, 255, 255, 0.8);
+            font-size: 13px;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0.7px 0px 2.2px rgba(0, 0, 0, 0.026), 1.8px 0px 5.3px rgba(0, 0, 0, 0.05),
+               3.4px 0px 10px rgba(0, 0, 0, 0.073), 6px 0px 17.9px rgba(0, 0, 0, 0.096),
+               11.3px 0px 33.4px rgba(0, 0, 0, 0.118), 27px 0px 80px rgba(0, 0, 0, 0.16);
+
+            transition: all 0.5s;
+         }
+         .another_ask #phone_num {
+            display: none;
+            position: absolute;
+            right: 70px;
+            background-color: #333;
+            color: rgb(255, 255, 255, 0.8);
+            font-size: 13px;
+            padding: 5px;
+            border-radius: 5px;
+
+            box-shadow: 0.7px 0px 2.2px rgba(0, 0, 0, 0.026), 1.8px 0px 5.3px rgba(0, 0, 0, 0.05),
+               3.4px 0px 10px rgba(0, 0, 0, 0.073), 6px 0px 17.9px rgba(0, 0, 0, 0.096),
+               11.3px 0px 33.4px rgba(0, 0, 0, 0.118), 27px 0px 80px rgba(0, 0, 0, 0.16);
+
+            transition: all 0.5s;
+         }
+         /* ------채널톡---------- */
+         .channel_talk {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 15px;
+
+            cursor: pointer;
+            font-size: 11px;
+            color: rgba(0, 0, 0, 0.4);
+            transform: translateY(10px);
+            opacity: 0;
+            animation: ani1 0.9s 0.6s ease-in-out forwards;
+         }
+         .channel_talk .comment_bubble {
+            margin-right: 5px;
+            transform: scaleX(-1);
+         }
+         .channel_talk:hover {
+            color: black;
+         }
+         /* ------------------keyframe */
+         @keyframes ani1 {
+            100% {
+               opacity: 1;
+               transform: translateY(0);
+            }
+         }
+         @keyframes ani2 {
+            100% {
+               /* opacity: 1; */
+               transform: scale(1);
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <div class="gybbpr">
+         <div class="gybbpr_circle">2</div>
+         <img src="../imgs/btn/emoji.png" alt="표정" />
+      </div>
+      <div class="counseApp">
+         <div class="counsenav">
+            <div class="counsenav_wrap">
+               <img src="../imgs/logo/o.png" alt="로고" />
+               <span>닥터모두</span>
+            </div>
+            <div class="counsenav_container">
+               <div class="gear">
+                  <i class="fa-solid fa-gear"></i>
+               </div>
+               <div class="xmark">
+                  <i class="fa-solid fa-xmark"></i>
+               </div>
+            </div>
+         </div>
+         <div class="counsemain">
+            <div class="counsemain_container">
+               <div class="counse_list">
+                  <span>상담목록</span>
+                  <div class="couse_check">
+                     <span class="material-symbols-outlined"> check_circle </span>
+                     <span class="all">전체읽기</span>
+                  </div>
+               </div>
+               <div class="chat_container">
+                  <div class="chat_img">
+                     <img src="../imgs/logo/o.png" alt="" />
+                  </div>
+                  <div class="chat_box">
+                     <div class="chat_top">닥터모두<span>12/12</span></div>
+                     <div class="chat_bottom">어떤 제품을 구매하실지 고민이신가요~?...</div>
+                  </div>
+                  <div class="chat_icon">
+                     <div class="signal_circle">1</div>
+                     <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+               </div>
+               <div class="chat_container">
+                  <div class="chat_img">
+                     <img src="../imgs/logo/o.png" alt="" />
+                  </div>
+                  <div class="chat_box">
+                     <div class="chat_top">닥터모두<span>12/12</span></div>
+                     <div class="chat_bottom">고객님, 지금 바로 회원 가입 후 3천원 할인 쿠폰 받아가세요! 🥳</div>
+                  </div>
+                  <div class="chat_icon">
+                     <div class="signal_circle">1</div>
+                     <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+               </div>
+
+               <div class="ask_wrapper">
+                  <div class="ask_container">
+                     <div class="chat_img">
+                        <img src="../imgs/logo/o.png" alt="" />
+                     </div>
+                     <div class="chat_box">
+                        <div class="chat_top">닥터모두</div>
+                        <div class="chat_bottom">
+                           안녕하세요 🙌<br />
+                           ···
+                        </div>
+                     </div>
+                  </div>
+                  <div class="ask_btn">
+                     <a href="#" class="btn">
+                        <span class="material-symbols-outlined"> send </span>
+                        새 문의하기
+                     </a>
+                  </div>
+                  <div class="guide_txt">
+                     <span class="material-symbols-outlined"> bolt </span>
+                     <span class="gtext">보통 몇 분 내 빠른 답변</span>
+                  </div>
+               </div>
+
+               <div class="another_ask">
+                  <p>다른 방법으로 상담</p>
+
+                  <div class="another_ask_wrapper">
+                     <a href="https://www.naver.com">
+                        <img src="../imgs/btn/app-messenger-naver-talk.png" alt="네이버톡톡" class="naver_btn" />
+                     </a>
+
+                     <div class="phone_box">
+                        <i class="fa-solid fa-phone"></i>
+                     </div>
+                  </div>
+                  <div id="naver_talk">
+                     <span>톡톡</span>
+                  </div>
+                  <div id="phone_num">
+                     <span>전화 :82 31-952-1128</span>
+                  </div>
+               </div>
+
+               <div class="channel_talk">
+                  <div class="comment_bubble">
+                     <i class="fa-solid fa-comment-dots"></i>
+                     <!-- 아니어떻게 맞는 svg가 하나도 없을까요 .. . -->
+                  </div>
+                  <span>채널톡 이용중</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         // 더럽고 지저분하고 꼬질한 내 스크립트 .. . . .
+         const xbtn = document.querySelector('.xmark');
+         const gybbpr = document.querySelector('.gybbpr');
+         const counseApp = document.querySelector('.counseApp');
+         const naverBtn = document.querySelector('.naver_btn');
+         const phone = document.querySelector('.phone_box');
+
+         gybbpr.addEventListener('click', () => {
+            counseApp.classList.add('on');
+            gybbpr.classList.add('off');
+         });
+         xbtn.addEventListener('click', () => {
+            counseApp.classList.remove('on');
+            gybbpr.classList.remove('off');
+         });
+
+         naverBtn.addEventListener('mouseover', () => {
+            document.getElementById('naver_talk').style.display = 'block';
+         });
+         naverBtn.addEventListener('mouseout', () => {
+            document.getElementById('naver_talk').style.display = 'none';
+         });
+
+         phone.addEventListener('mouseover', () => {
+            document.getElementById('phone_num').style.display = 'block';
+         });
+         phone.addEventListener('mouseout', () => {
+            document.getElementById('phone_num').style.display = 'none';
+         });
+      </script>
+   </body>
+</html>

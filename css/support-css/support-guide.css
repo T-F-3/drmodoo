@@ -1,0 +1,943 @@
+@charset "utf-8";
+/* 공통부분 */
+
+body {
+   font-family: 'Noto Sans KR', sans-serif;
+   font-weight: 300;
+   background-color: #f5f5f5;
+   /* text-align: center; */
+   width: 100%;
+}
+section h2 {
+   text-align: center;
+   font-family: 'YUniverse-B', 'Noto Sans KR', sans-serif;
+   font-size: 90px;
+   text-transform: capitalize;
+
+   margin-top: 140px;
+   line-height: 1.5;
+   margin-bottom: 50px;
+}
+a {
+   text-decoration: none;
+   color: inherit;
+}
+/* 네비게이션 */
+ul {
+   display: flex;
+   padding: 0;
+   list-style: none;
+}
+
+/* 지금 회원 가입시 3천원 쿠폰 지급 */
+.top_promotion {
+   display: block;
+   width: 100%;
+   height: 36px;
+   text-align: center;
+   text-decoration: none;
+   color: white;
+   background-color: #004e5f;
+   line-height: 36px;
+   font-size: 14px;
+   position: relative;
+   transition: 0.5s;
+}
+.top_promotion > .x {
+   position: absolute;
+   right: 5px;
+   top: 25%;
+}
+
+/* --------------------------------- */
+
+/* 네비게이션 */
+nav {
+   z-index: 900;
+   width: 100%;
+   height: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: sticky;
+   top: 0;
+}
+nav a {
+   text-decoration: none;
+   color: inherit;
+   font-family: 'YUniverse-B';
+   display: block;
+}
+nav h1 {
+   margin-right: 50px;
+   margin-left: 88px;
+   width: 170px;
+}
+nav h1 img {
+   position: relative;
+}
+.nav_left {
+   display: flex;
+   height: 100%;
+   align-items: center;
+   width: 50%;
+   transition: 0.5s;
+   background-color: white;
+}
+/* 메인 메뉴 */
+nav .main_menu_ul li a {
+   position: relative;
+   padding: 15px;
+   font-size: 22px;
+}
+/* 움직이는 밑줄 */
+nav .main_menu_ul > li > a::after {
+   content: '';
+   width: 0%;
+   height: 1px;
+   background-color: black;
+   position: absolute;
+   top: 45px;
+   left: 5px;
+   transform: translateX(5px);
+   transition: 0.5s;
+}
+nav .main_menu_ul > li > a:hover::after {
+   width: 80%;
+}
+
+/* 움직이는 밑줄 */
+
+/* 서브메뉴 */
+.sub_menu_ul {
+   overflow: hidden;
+   flex-direction: column;
+   position: absolute;
+   top: 90px;
+}
+.sub_menu_ul li {
+   opacity: 0;
+   pointer-events: none;
+}
+nav .sub_menu_ul > li a {
+   width: 160px;
+   background-color: white;
+   font-size: 17px;
+}
+.sub_menu_ul li a:hover {
+   background-color: #004e5f;
+   color: white;
+}
+
+nav .main_menu_ul li:hover > .sub_menu_ul li {
+   opacity: 1;
+   pointer-events: all;
+}
+
+/* 검색창 */
+.nav_right {
+   display: flex;
+   align-items: center;
+   position: absolute;
+   right: 93px;
+   top: 25px;
+}
+.nav_right label {
+   position: relative;
+}
+
+.nav_right label span {
+   position: absolute;
+   right: 30px;
+   width: 20px;
+}
+
+.nav_right label input {
+   color: #c0c0bf;
+   border: none;
+   border-bottom: 2px solid black;
+   width: 216px;
+   padding-bottom: 7px;
+   margin-right: 24px;
+   background-color: transparent;
+}
+
+.bag_circle {
+   position: absolute;
+   right: 10px;
+   top: 25px;
+   font-size: 13px;
+   color: white;
+   width: 15px;
+   height: 15px;
+   background-color: #004e5f;
+   line-height: 15px;
+   text-align: center;
+   border-radius: 50%;
+}
+
+/* ----------------------------- */
+.guide_wrapper {
+   margin: 0 auto;
+   padding: 0 5%;
+
+   max-width: 1500px;
+}
+/* 가이드 이미지 및 텍스트 박스  */
+
+.guide_box {
+   margin-bottom: 30px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.guide_box .guide_text {
+   margin: 50px 0;
+   padding: 30px 7%;
+   text-align: left;
+}
+.guide_box .guide_text span {
+   font-size: 20px;
+   font-weight: 300;
+   color: #888;
+}
+
+.guide_box .guide_text p {
+   font-size: 28px;
+   font-weight: 400;
+   margin-bottom: 50px;
+}
+
+.guide_box .guide_text a {
+   display: block;
+   position: relative;
+
+   padding: 14px 40px;
+
+   width: 234px;
+   font-size: 24px;
+   font-weight: 300;
+
+   border: 1px solid black;
+}
+.guide_box .guide_text a::before {
+   content: '';
+   display: block;
+   position: absolute;
+   top: 50%;
+   right: 40px;
+   width: 24px;
+   height: 1px;
+   background-color: black;
+}
+.guide_box .guide_text a::after {
+   content: '';
+   display: block;
+   position: absolute;
+
+   top: 56%;
+   right: 37px;
+   width: 12px;
+   height: 1px;
+   background-color: black;
+   transform: rotate(-45deg);
+}
+
+/* 검색란 */
+.find_wrapper {
+   padding: 10px 0;
+}
+.find_wrapper select {
+   width: 100px;
+   height: 28px;
+   line-height: 28px;
+   font-size: 11px;
+
+   border: 1px #ddd solid;
+}
+.find_wrapper input {
+   border: 1px solid #d5d5d5;
+   padding: 2px 4px;
+   height: 28px;
+   line-height: 28px;
+}
+.find_wrapper .a_btn {
+   display: inline-block;
+   height: 28px;
+
+   text-align: center;
+   color: black;
+   background-color: white;
+   border: 1px solid #ccc;
+   padding: 4px 8px;
+   border-radius: 2px;
+   font-size: 11px;
+}
+.btn_container {
+   width: 100%;
+   text-align: center;
+
+   margin-top: 30px;
+   margin-bottom: 160px;
+}
+.btn_container img {
+   padding: 5px;
+   vertical-align: top;
+   opacity: 0.6;
+}
+.btn_container a {
+   font-size: 16px;
+   font-weight: 500;
+   display: inline-block;
+   color: black;
+
+   width: 30px;
+}
+/* ----------------------------- */
+/* 우측 하단의 상담챗 */
+.gybbpr {
+   z-index: 999;
+   position: fixed;
+   bottom: 20px;
+   right: 50px;
+   width: 60px;
+   height: 60px;
+   border-radius: 26px;
+   background-color: rgb(255, 255, 255, 0.9);
+   box-shadow: rgb(255 255 255 / 12%) 0px 0px 2px 0px inset, rgb(0 0 0 / 5%) 0px 0px 2px 1px,
+      rgb(0 0 0 / 22%) 0px 4px 20px;
+
+   transition: all 0.3s;
+   cursor: pointer;
+   opacity: 1;
+}
+.gybbpr.off {
+   opacity: 0;
+   pointer-events: none;
+}
+.gybbpr:hover {
+   box-shadow: rgb(255 255 255 / 12%) 0px 0px 2px 0px inset, rgb(0 0 0 / 5%) 0px 0px 2px 1px,
+      rgb(0 0 0 / 30%) 0px 6px 40px;
+   background: rgba(255, 255, 255, 0.9);
+}
+.span_box .day_text {
+   font-size: 11px;
+   color: rgba(0, 0, 0, 0.4);
+}
+.span_box .name_text {
+   font-size: 13px;
+   font-weight: bold;
+}
+.textbox_circle,
+.signal_circle {
+   width: 20px;
+   height: 20px;
+   background-color: rgb(233, 78, 88);
+   color: white;
+   font-size: 13px;
+   text-align: center;
+   border-radius: 50%;
+}
+.gybbpr .gybbpr_circle {
+   background-color: #e94e58;
+   color: white;
+   box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 1px, rgb(0 0 0 / 8%) 0px 1px 2px, rgb(255 255 255 / 12%) 0px 0px 2px inset;
+   width: 24px;
+   height: 24px;
+   text-align: center;
+   border-radius: 12px;
+   position: absolute;
+   right: 0;
+   top: -7px;
+   font-size: 14px;
+}
+.gybbpr img {
+   position: absolute;
+   width: 50px;
+   height: 50px;
+   top: 50%;
+   right: 50%;
+   transform: translate(52%, -50%);
+}
+.icon_box img {
+   width: 36px;
+   height: 36px;
+}
+/* -------------아이콘 클릭시 팝업창 -------------- */
+.counseApp {
+   text-align: left;
+   z-index: 9999;
+   position: fixed;
+   right: 30px;
+   bottom: 30px;
+   height: 680px;
+   width: 370px;
+   background-color: #efefef;
+   border-radius: 24px;
+   box-shadow: 0.7px 0px 2.2px rgba(0, 0, 0, 0.026), 1.8px 0px 5.3px rgba(0, 0, 0, 0.05),
+      3.4px 0px 10px rgba(0, 0, 0, 0.073), 6px 0px 17.9px rgba(0, 0, 0, 0.096), 11.3px 0px 33.4px rgba(0, 0, 0, 0.118),
+      27px 0px 80px rgba(0, 0, 0, 0.16);
+
+   display: none;
+}
+.counseApp.on {
+   display: block;
+}
+.counseApp .counsenav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   padding-right: 14px;
+   padding-left: 22px;
+   height: 60px;
+}
+.counseApp .counsenav .counsenav_wrap {
+   display: flex;
+   align-items: center;
+}
+.counseApp .counsenav .counsenav_container {
+   display: flex;
+   align-items: center;
+}
+.counseApp .counsenav .counsenav_container .gear,
+.xmark {
+   color: rgb(3, 78, 95);
+   font-size: 20px;
+
+   cursor: pointer;
+}
+.counseApp .counsenav .counsenav_container .gear {
+   margin-right: 20px;
+   font-size: 18px;
+}
+.counseApp .counsenav .counsenav_wrap span {
+   font-size: 18px;
+   margin: 0 0 0 8px;
+   font-weight: bold;
+}
+.counseApp .counsenav img {
+   width: 30px;
+   height: 30px;
+   border-radius: 10px;
+}
+.counseApp .counsemain {
+   position: relative;
+   padding: 0px 14px 20px;
+}
+.counseApp .counsemain .counsemain_container {
+   box-shadow: rgb(255 255 255 / 12%) 0px 0px 2px 0px inset, rgb(0 0 0 / 5%) 0px 0px 2px 1px,
+      rgb(0 0 0 / 8%) 0px 2px 6px;
+   padding: 12px 0 6px;
+
+   background-color: white;
+   border-radius: 18px;
+
+   width: 342px;
+   height: 190px;
+
+   margin-top: 20px;
+
+   transform: translateY(10px);
+   opacity: 0;
+   animation: ani1 0.4s 0.3s ease-in-out forwards;
+}
+.counseApp .counsemain .counse_list {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0px 14px 2px;
+}
+.counseApp .counsemain .counse_list:hover {
+   color: rgba(0, 0, 0, 0.85);
+}
+.counseApp .counsemain .counse_list span {
+   font-size: 13px;
+   color: rgba(0, 0, 0, 0.4);
+}
+.counseApp .counsemain .counse_list .material-symbols-outlined {
+   font-size: 16px;
+}
+.counseApp .counsemain .couse_check {
+   display: flex;
+   align-items: center;
+
+   cursor: pointer;
+}
+.counseApp .counsemain .counse_list .all {
+   color: #00000099;
+}
+
+/* 팝업창 이너박스 */
+.chat_container {
+   height: 76px;
+
+   margin: 0 6px;
+
+   display: flex;
+   align-items: center;
+
+   cursor: pointer;
+   transition: all 0.5s;
+}
+.chat_container:hover {
+   background-color: rgba(0, 0, 0, 0.03);
+   border-radius: 15px;
+}
+.chat_container .chat_img {
+   width: 52px;
+   padding: 0 0 0 6px;
+}
+.chat_img img {
+   width: 36px;
+   height: 36px;
+   border-radius: 15px;
+}
+.chat_container .chat_box {
+   width: 246px;
+   padding: 8px 0 12px;
+}
+
+.chat_container .chat_box .chat_top {
+   font-size: 13px;
+   font-weight: bold;
+}
+.chat_container .chat_box .chat_bottom {
+   font-size: 15px;
+}
+.chat_container .chat_box .chat_top span {
+   font-size: 11px;
+   margin-left: 4px;
+   color: rgba(0, 0, 0, 0.4);
+}
+.chat_container .chat_icon {
+   width: 52px;
+   display: flex;
+
+   align-items: center;
+}
+/* -------------질문하기란----------------- */
+.ask_wrapper {
+   margin-top: 14px;
+   padding: 6px 0;
+   width: 342px;
+   height: 170px;
+   box-shadow: rgb(255 255 255 / 12%) 0px 0px 2px 0px inset, rgb(0 0 0 / 5%) 0px 0px 2px 1px,
+      rgb(0 0 0 / 8%) 0px 2px 6px;
+   background-color: white;
+   border-radius: 18px;
+
+   transform: translateY(10px);
+   opacity: 0;
+   animation: ani1 0.7s 0.4s ease-in-out forwards;
+}
+.ask_wrapper .ask_btn {
+   width: 286px;
+   padding: 14px;
+   background: rgba(0, 0, 0, 0.05);
+   margin: 0 auto;
+   font-weight: bold;
+   opacity: 1;
+   border-radius: 17px;
+
+   display: flex;
+   justify-content: center;
+
+   cursor: pointer;
+}
+.ask_wrapper .ask_btn:hover {
+   background-color: rgba(0, 0, 0, 0.08);
+}
+.ask_wrapper .ask_btn a {
+   text-decoration: none;
+   color: inherit;
+}
+.ask_wrapper .ask_btn .btn {
+   display: flex;
+   align-items: center;
+}
+.ask_wrapper .ask_btn .btn span {
+   margin-right: 4px;
+   color: rgba(0, 0, 0, 0.85);
+}
+.ask_container {
+   display: flex;
+   justify-content: center;
+   height: 67px;
+   /* width: 100%; */
+   margin: 0 6px;
+   margin-bottom: 10px;
+
+   transition: all 0.5s;
+   cursor: pointer;
+}
+.ask_container:hover {
+   background-color: rgba(0, 0, 0, 0.03);
+   border-radius: 15px;
+}
+.ask_container .chat_img {
+   padding: 8px 0 0 6px;
+   margin-right: 8px;
+   height: 50px;
+}
+.ask_container .chat_box {
+   width: 280px;
+   padding: 8px 0 12px;
+   height: 70px;
+}
+.ask_container .chat_box .chat_top {
+   font-size: 13px;
+   font-weight: bold;
+}
+.ask_container .chat_box .chat_bottom {
+   padding: 0 0 12px 0;
+}
+.ask_wrapper .guide_txt {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   margin-top: 5px;
+
+   cursor: inherit;
+}
+.ask_wrapper .guide_txt .material-symbols-outlined {
+   color: #31a552;
+   font-size: 20px;
+}
+.ask_wrapper .guide_txt .gtext {
+   font-size: 11px;
+   color: rgba(0, 0, 0, 0.6);
+}
+/* -----------다른곳으로 질문하기--------------- */
+.another_ask {
+   height: 62px;
+   width: 100%;
+   margin-top: 14px;
+   padding: 0 14px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: rgb(255 255 255 / 12%) 0px 0px 2px 0px inset, rgb(0 0 0 / 5%) 0px 0px 2px 1px,
+      rgb(0 0 0 / 8%) 0px 2px 6px;
+   background-color: rgb(255, 255, 255);
+   border-radius: 18px;
+   transform: translateY(10px);
+   opacity: 0;
+   animation: ani1 0.8s 0.5s ease-in-out forwards;
+}
+
+.another_ask p {
+   font-size: 13px;
+   color: rgba(0, 0, 0, 0.4);
+}
+.another_ask .another_ask_wrapper {
+   display: flex;
+}
+.another_ask img {
+   width: 36px;
+   height: 36px;
+   border-radius: 14px;
+   margin-right: 10px;
+
+   transition: all 0.5s;
+
+   cursor: pointer;
+}
+.another_ask img:hover {
+   transform: scale(1.1);
+}
+.another_ask .phone_box {
+   background-color: rgba(0, 0, 0, 0.05);
+   width: 36px;
+   height: 36px;
+   border-radius: 14px;
+   text-align: center;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   transition: all 0.5s;
+
+   cursor: pointer;
+}
+.another_ask .phone_box:hover {
+   transform: scale(1.1);
+}
+.another_ask .phone_box i {
+   color: rgba(0, 0, 0, 0.4);
+}
+.another_ask #naver_talk {
+   display: none;
+   position: absolute;
+   right: 115px;
+   background-color: #333;
+   color: rgb(255, 255, 255, 0.8);
+   font-size: 13px;
+   padding: 5px;
+   border-radius: 5px;
+   box-shadow: 0.7px 0px 2.2px rgba(0, 0, 0, 0.026), 1.8px 0px 5.3px rgba(0, 0, 0, 0.05),
+      3.4px 0px 10px rgba(0, 0, 0, 0.073), 6px 0px 17.9px rgba(0, 0, 0, 0.096), 11.3px 0px 33.4px rgba(0, 0, 0, 0.118),
+      27px 0px 80px rgba(0, 0, 0, 0.16);
+
+   transition: all 0.5s;
+}
+.another_ask #phone_num {
+   display: none;
+   position: absolute;
+   right: 70px;
+   background-color: #333;
+   color: rgb(255, 255, 255, 0.8);
+   font-size: 13px;
+   padding: 5px;
+   border-radius: 5px;
+
+   box-shadow: 0.7px 0px 2.2px rgba(0, 0, 0, 0.026), 1.8px 0px 5.3px rgba(0, 0, 0, 0.05),
+      3.4px 0px 10px rgba(0, 0, 0, 0.073), 6px 0px 17.9px rgba(0, 0, 0, 0.096), 11.3px 0px 33.4px rgba(0, 0, 0, 0.118),
+      27px 0px 80px rgba(0, 0, 0, 0.16);
+
+   transition: all 0.5s;
+}
+/* ------채널톡---------- */
+.channel_talk {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   margin-top: 15px;
+
+   cursor: pointer;
+   font-size: 11px;
+   color: rgba(0, 0, 0, 0.4);
+   transform: translateY(10px);
+   opacity: 0;
+   animation: ani1 0.9s 0.6s ease-in-out forwards;
+}
+.channel_talk .comment_bubble {
+   margin-right: 5px;
+   transform: scaleX(-1);
+}
+.channel_talk:hover {
+   color: black;
+}
+/* ------------------keyframe */
+@keyframes ani1 {
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+/* 사이드메뉴 */
+#sidebar_container {
+   z-index: 999;
+   background-color: #fff;
+
+   position: fixed;
+
+   right: 0;
+   top: 30%;
+
+   width: 74px;
+
+   font-size: 13px;
+   line-height: 1.3;
+   text-align: center;
+
+   transition: all 0.5s;
+   transform: translateX(74px);
+}
+#sidebar_container.open {
+   transform: translateX(0);
+}
+.side_btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 40%;
+   right: 100%;
+   background: #444;
+   color: white;
+   width: 20px;
+   height: 80px;
+   border-radius: 10px 0 0 10px;
+
+   cursor: pointer;
+}
+#side_nav {
+   display: block;
+}
+#sidebar_container li:nth-child(1) {
+   background-color: #004e5f;
+   color: #fff;
+}
+#sidebar_container li:nth-child(2) {
+   background-color: #000;
+   color: #fff;
+}
+#sidebar_container ul li a {
+   display: block;
+   padding: 4px;
+}
+
+/* -----footer------ */
+footer {
+   margin: 0 auto 0;
+   position: relative;
+   padding: 0 0 150px;
+   background: url(../../imgs/index/foot_bg.jpg) repeat center;
+   background-size: cover;
+   clear: both;
+   overflow: hidden;
+   color: #fff;
+   font-family: 'Noto Sans KR', 'YUniverse-B', 돋움, sans-serif;
+}
+footer a {
+   color: #fff;
+   text-decoration: none;
+}
+footer .footer_textbox1 {
+   margin: 0 auto;
+   padding: 100px 5%;
+   background-color: #000;
+}
+footer .footer_textbox1 > h2 {
+   margin: 0 0 50px;
+   font-weight: 500;
+}
+footer .footer_textbox1 > h2 a img {
+   width: auto;
+   height: auto;
+   border: none;
+   vertical-align: top;
+}
+footer .footer_textbox1 ul {
+   position: relative;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   text-align: left;
+   clear: both;
+   overflow: hidden;
+   line-height: 2;
+}
+footer .footer_textbox1 ul li.footer_box {
+   width: 50%;
+}
+footer .footer_textbox1 ul li {
+   position: relative;
+   display: inline-block;
+   box-sizing: border-box;
+   vertical-align: top;
+}
+footer .footer_textbox1 ul li p {
+   font-size: 14px;
+   line-height: 2.2;
+   font-weight: 300;
+}
+footer .footer_textbox1 ul li h2 {
+   margin: 0 0 10px;
+   font-size: 1.8rem;
+   font-family: 'YUniverse-B';
+   font-weight: 500;
+}
+footer .footer_textbox1 ul li span {
+   position: relative;
+   display: inline-block;
+   margin-right: 10px;
+   padding-right: 10px;
+}
+footer .footer_textbox1 ul li p .footer_before::before {
+   content: '';
+   position: absolute;
+   right: 0px;
+   top: 17px;
+   transform: translateY(-50%);
+   display: block;
+   width: 1px;
+   height: 12px;
+   background-color: #555;
+}
+footer .footer_textbox1 ul li.footer_guide {
+   width: 25%;
+   padding: 0 2.5%;
+}
+footer .footer_textbox1 ul li .footer_address {
+   display: block;
+   margin-top: 20px;
+}
+footer .footer_textbox1 ul li .footer_address span {
+   font-weight: 500;
+   padding: 0;
+   margin: 0;
+}
+footer .footer_guide p {
+   position: relative;
+   padding: 10px 0;
+   border-bottom: 1px #fff solid;
+}
+footer .footer_guide p a {
+   display: block;
+}
+footer .footer_guide i.arrow {
+   position: absolute;
+   top: 55%;
+   transform: translateY(-50%);
+   right: 0;
+   margin: 0;
+   display: inline-block;
+   width: 24px;
+   height: 10px;
+   vertical-align: middle;
+}
+footer .footer_guide i.arrow::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: block;
+   width: 100%;
+   height: 1px;
+   background-color: rgba(255, 255, 255, 0.8);
+}
+footer .footer_guide i.arrow::after {
+   content: '';
+   position: absolute;
+   top: 9px;
+   right: -5px;
+   display: block;
+   width: 12px;
+   height: 1px;
+   background-color: rgba(255, 255, 255, 0.8);
+   transform: rotate(-50deg);
+   transform-origin: top left;
+}
+footer .footer_textbox2 {
+   position: absolute;
+   left: 5%;
+   right: 5%;
+   bottom: 0;
+   display: flex;
+   height: auto;
+   font-size: 14px;
+   line-height: 150px;
+   box-sizing: border-box;
+   flex-flow: row nowrap;
+   -webkit-box-align: center;
+   align-items: center;
+   -webkit-box-pack: start;
+   justify-content: start;
+}
+footer .footer_textbox2 span {
+   display: inline-block;
+   margin-right: 5%;
+   font-size: 1.2rem;
+}
+footer .footer_textbox2 span:last-child {
+   margin-right: 0;
+}
+footer .footer_textbox2 .footer_contact {
+   font-size: 1.8rem;
+   font-family: 'YUniverse-B';
+}
