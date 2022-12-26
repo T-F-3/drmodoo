@@ -236,7 +236,7 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0.4;
   background-color: #000;
   border-radius: 15px;
 }
