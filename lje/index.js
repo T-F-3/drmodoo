@@ -80,31 +80,30 @@ let mainreview = new Swiper("#swiper2", {
 });
 
 /* anination */
-//2537 main reo
-//3425 main scalp
+
 addEventListener('scroll', () => {
-    const ani1 = document.querySelector('.reorgaTxt p');
-    const ani2 = document.querySelector('.scalplabTxt p');
+    const Mainani1 = document.querySelector('.reorgaTxt p');
+    const Mainani2 = document.querySelector('.scalplabTxt p');
 
     if(scrollY>2537){
-        ani1.style.opacity = '1'
+        Mainani1.style.opacity = '1'
         if(scrollY >= 2600){
-            ani1.style.transform = 'translateY(0px)'
+            Mainani1.style.transform = 'translateY(0px)'
         }else{
-            ani1.style.transform = 'translateY(-120px)'
+            Mainani1.style.transform = 'translateY(-120px)'
         }
     }else{
-        ani1.style.opacity = '0'
+        Mainani1.style.opacity = '0'
     } 
     if(scrollY>3300){
-        ani2.style.opacity = '1'
+        Mainani2.style.opacity = '1'
         if(scrollY >= 3440){
-            ani2.style.transform = 'translateY(0px)'
+            Mainani2.style.transform = 'translateY(0px)'
         }else{
-            ani2.style.transform = 'translateY(-120px)'
+            Mainani2.style.transform = 'translateY(-120px)'
         }
     }else{
-        ani2.style.opacity = '0'
+        Mainani2.style.opacity = '0'
     } 
     console.log(scrollY)
 
