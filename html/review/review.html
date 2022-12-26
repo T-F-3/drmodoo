@@ -619,7 +619,7 @@
               </div>
               <div class="text_box">
                 <label>
-                  <input type="search" value="" />
+                  <input onkeyup="filter()" id="value" type="search" value="" />
                   <span class="material-symbols-outlined">search </span></label
                 >
               </div>
@@ -715,7 +715,7 @@
                     </div>
                   </div>
                   <div class="review_p">
-                    <p>
+                    <p class="name">
                       두피가 깨끗해졌습니당 원래 울긋불긋 트러블 있고 비듬 있고
                       떡지고 아주 총체적난국이었는데 한 달 쓰고 사람 머리 됐어여
                       감사의 의미로 3통 재구매합니다 쟁겨두고 써야댐
@@ -812,7 +812,7 @@
                     </div>
                   </div>
                   <div class="review_p">
-                    <p>
+                    <p class="name">
                       머리 막 감았을 때랑 하루 지났을 때인데, 비듬이나 떡짐이
                       없네요 땀도 흘렸는데. 원래 샤워 반나절만에 비듬 떨어지는
                       사람이었던지라 너무 좋습니다
@@ -910,7 +910,7 @@
                     </div>
                   </div>
                   <div class="review_p">
-                    <p>
+                    <p class="name">
                       머리에 저 큰 트러블 보이시나요..? 저게 사라졌어요... 아직
                       흉터처럼 조금 남아있긴 한데 암튼 저거 달고 산 지 몇 개월
                       됐는데 샴푸 바꾸고 한 달도 안돼서 사라져 가는 게 너무
@@ -1008,7 +1008,7 @@
                     </div>
                   </div>
                   <div class="review_p">
-                    <p>
+                    <p class="name">
                       전에 다른 샴푸쓰고도 안잡힌 머리에 비듬이 이거 쓰고 나서
                       바로<br />
                       잡힌 거 보고 너무 신기했어요 ㅋㅋㅋ 이제는 머리 상하지
@@ -1106,7 +1106,7 @@
                     </div>
                   </div>
                   <div class="review_p any active">
-                    <p>
+                    <p class="name">
                       여름에 쿨링샴푸 최고인듯요 아들이 머리냄새가 여간
                       심한게<br />
                       아니라 이것저것 좋다는거 다 써봐도 별소용이 없더니, 이거
@@ -1203,6 +1203,45 @@
         </li>
       </ul>
     </div>
+    <script>
+      function active() {
+        const span = document.querySelector(".span");
+        const more_btn = document.querySelector("#more_btn");
+        const close_btn = document.querySelector("#close_btn");
+        const img = document.querySelector(".img");
+
+        more_btn.addEventListener("click", () => {
+          span.style.display = "inline-block";
+          img.classList.add("active");
+          more_btn.style.display = "none";
+          close_btn.style.display = "block";
+        });
+        close_btn.addEventListener("click", () => {
+          span.style.display = "none";
+          more_btn.style.display = "block";
+          close_btn.style.display = "none";
+          img.classList.remove("active");
+        });
+      }
+      active();
+
+      function filter() {
+        let value, name, item, i;
+
+        value = document.getElementById("value").value.toUpperCase();
+        item = document.getElementsByClassName("review_p");
+        list = document.getElementsByClassName("flex_list");
+
+        for (i = 0; i < item.length; i++) {
+          name = item[i].getElementsByClassName("name");
+          if (name[0].innerHTML.toUpperCase().indexOf(value) > -1) {
+            list[i].style.display = "flex";
+          } else {
+            list[i].style.display = "none";
+          }
+        }
+      }
+    </script>
     <!-- 하단 상담챗 -->
     <div class="gybbpr">
       <div class="gybbpr_circle">2</div>
@@ -1323,28 +1362,6 @@
       </div>
     </div>
 
-    <script>
-      function active() {
-        const span = document.querySelector(".span");
-        const more_btn = document.querySelector("#more_btn");
-        const close_btn = document.querySelector("#close_btn");
-        const img = document.querySelector(".img");
-
-        more_btn.addEventListener("click", () => {
-          span.style.display = "inline-block";
-          img.classList.add("active");
-          more_btn.style.display = "none";
-          close_btn.style.display = "block";
-        });
-        close_btn.addEventListener("click", () => {
-          span.style.display = "none";
-          more_btn.style.display = "block";
-          close_btn.style.display = "none";
-          img.classList.remove("active");
-        });
-      }
-      active();
-    </script>
     <!-- footer -->
     <footer>
       <div class="footer_container">

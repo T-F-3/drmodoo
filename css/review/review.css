@@ -316,6 +316,9 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   border: solid 1px #eaeaea;
   padding: 0 5px;
 }
+.widget_sub .widget_board .widget_w .text_box label #value:focus {
+  outline: none;
+}
 .widget_sub .widget_board .widget_w .text_box label span {
   margin-right: 10px;
   cursor: pointer;
