@@ -462,7 +462,7 @@ h3 {
 .clean_beautyafter::after {
   content: "+";
   position: absolute;
-  right: -23px;
+  right: -28px;
   top: 40%;
   transform: translateY(-50%);
   display: block;
