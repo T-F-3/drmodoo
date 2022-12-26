@@ -110,28 +110,26 @@ nav .main_menu_ul > li > a:hover::after {
   overflow: hidden;
   flex-direction: column;
   position: absolute;
-  top: 90px;
+  top: 79px;
 }
 
 .sub_menu_ul li {
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
-nav .sub_menu_ul > li a {
+nav .sub_menu_ul>li a {
   width: 160px;
   background-color: white;
   font-size: 17px;
 }
 
 .sub_menu_ul li a:hover {
-  background-color: #004e5f;
+  background-color: #004E5F;
   color: white;
 }
 
-nav .main_menu_ul li:hover > .sub_menu_ul li {
-  opacity: 1;
-  pointer-events: all;
+nav .main_menu_ul li:hover>.sub_menu_ul li {
+  display: block;
 }
 
 /* 검색창 */
@@ -459,25 +457,26 @@ h3 {
   position: sticky;
 }
 
-.clean_beautyafter::after {
-  content: "+";
-  position: absolute;
-  right: -23px;
-  top: 40%;
-  transform: translateY(-50%);
-  display: block;
-  font-size: 5rem;
-  font-weight: bold;
-  color: #004e5f;
-}
 .clean_beautyafter::before {
   content: "";
   position: absolute;
-  bottom: 20%;
+  top:10%;
   right: 0;
   width: 2px;
   height: 80%;
-  background-color: #c0c0bf;
+  background-color: #e5e5e5;
+}
+.clean_beautyafter::after {
+  content: "+";
+  position: absolute;
+  right: -21px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  font-size: 72px;
+  font-weight: bold;
+  color: #004e5f;
+  
 }
 
 .safety_certificate {
@@ -612,11 +611,11 @@ h3 {
 }
 
 .philosophy_grid_item {
-  padding: 5% 10%;
+  padding: 5%;
 }
 
 .philosophy_grid_item h2 {
-  font-size: 80px;
+  font-size: 75px;
   margin-top: 80px;
 }
 .philosophy_grid_item p {

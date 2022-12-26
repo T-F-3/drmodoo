@@ -80,8 +80,7 @@ let mainreview = new Swiper("#swiper2", {
 });
 
 /* anination */
-//2537 main reo
-//3425 main scalp
+
 addEventListener('scroll', () => {
     const ani1 = document.querySelector('.reorgaTxt p');
     const ani2 = document.querySelector('.scalplabTxt p');

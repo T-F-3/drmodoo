@@ -840,6 +840,7 @@ footer .footer_textbox1 ul li h2 {
    font-size: 1.8rem;
    font-family: 'YUniverse-B';
    font-weight: 500;
+   text-align: left;
 }
 footer .footer_textbox1 ul li span {
    position: relative;
