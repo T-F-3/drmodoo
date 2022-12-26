@@ -52,131 +52,140 @@
 
 
         /* 네비게이션 */
-        nav{
-            width: 100%;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top:0;
-        }
-        nav a{
-            text-decoration: none;
-            color:inherit;
-            font-family: 'YUniverse-B';
-            display: block;
-        }
-        nav h1{
-            margin-right: 50px;
-            margin-left: 88px;
-            width: 170px;
-        }
-        nav h1 img{
-            position: relative;
-        }
-        .nav_left{
-            display: flex;
-            height: 100%;
-            align-items: center;
-            width: 50%;
-            transition: .5s;
-            background-color: white;
-        }
-        /* 메인 메뉴 */
-        nav .main_menu_ul li a{
-             position: relative;
-             padding: 15px;
-             font-size: 22px;
-             
-             
-        }
-        /* 움직이는 밑줄 */
-        nav .main_menu_ul > li > a::after {
-            content: "";
-            width: 0%;
-            height: 1px;
-            background-color: black;
-            position: absolute;
-            top: 45px;
-            left: 5px;
-            transform: translateX(5px);
-            transition: 0.5s;  
-        }
-        nav .main_menu_ul > li > a:hover::after {
-            width: 80%;
-        }
+       nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+}
 
-        /* 움직이는 밑줄 */
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'YUniverse-B';
+    display: block;
+}
 
-        /* 서브메뉴 */
-        .sub_menu_ul{
-            overflow: hidden;
-            flex-direction: column;
-            position: absolute;
-            top:90px;
-        }
-        .sub_menu_ul li{
-            opacity: 0;
-            pointer-events: none;
-        }
-        nav .sub_menu_ul > li a{
-            width: 160px;
-            background-color: white;
-            font-size: 17px;
-        }
-        .sub_menu_ul li a:hover{
-            background-color: #004E5F;
-            color:white;
-        }
+nav h1 {
+    margin-right: 50px;
+    margin-left: 88px;
+    width: 170px;
+}
 
-        nav .main_menu_ul li:hover > .sub_menu_ul li{
-            opacity: 1;
-            pointer-events: all;
-        }
+nav h1 img {
+    position: relative;
+}
 
-        /* 검색창 */
-        .nav_right{
-            display: flex;
-            align-items: center;
-            position: absolute;
-            right: 93px;
-            top:25px
-        }
-        .nav_right label{
-         position: relative;
-        }
+.nav_left {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 50%;
+    transition: .5s;
+    background-color: white;
+}
 
-        .nav_right label span{
-            position: absolute;
-            right: 30px;
-            width: 20px;
-
-        }
-
-        .nav_right label input{
-            color: #C0C0BF;
-            border: none;
-            border-bottom: 2px solid black ;
-            width: 216px;
-            padding-bottom: 7px;
-            margin-right: 24px;
-            background-color: transparent;
-        }
+/* 메인 메뉴 */
+nav .main_menu_ul li a {
+    position: relative;
+    padding: 15px;
+    font-size: 22px;
 
 
-        .bag_circle{
-            position: absolute;
-            right: 10px;
-            top: 25px;
-            font-size: 13px;
-            color: white;
-            width: 15px; height: 15px;
-            background-color: #004E5F;
-            line-height: 15px;
-            text-align: center;
-            border-radius: 50%;
-        }
+}
+
+
+
+/* 움직이는 밑줄 */
+nav .main_menu_ul>li>a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 45px;
+    left: 5px;
+    transform: translateX(5px);
+    transition: 0.5s;
+}
+
+nav .main_menu_ul>li>a:hover::after {
+    width: 80%;
+}
+
+/* 움직이는 밑줄 */
+
+/* 서브메뉴 */
+.sub_menu_ul {
+    overflow: hidden;
+    flex-direction: column;
+    position: absolute;
+    top: 79px;
+}
+.sub_menu_ul li {
+    display: none;
+}
+nav .sub_menu_ul>li a {
+    width: 160px;
+    background-color: white;
+    font-size: 17px;
+}
+.sub_menu_ul li a:hover {
+    background-color: #004E5F;
+    color: white;  
+}
+nav .main_menu_ul li:hover>.sub_menu_ul li {
+    display: block;
+} 
+/* 검색창 */
+.nav_right {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 93px;
+    top: 25px
+}
+
+.nav_right label {
+    position: relative;
+}
+
+.nav_right label span {
+    position: absolute;
+    right: 30px;
+    width: 20px;
+
+}
+
+.nav_right label input {
+    color: #C0C0BF;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 216px;
+    padding-bottom: 7px;
+    margin-right: 24px;
+    background-color: transparent;
+}
+
+
+.bag_circle {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    font-size: 13px;
+    color: white;
+    width: 15px;
+    height: 15px;
+    background-color: #004E5F;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 50%;
+}
+
     </style>
 </head>
 <body>
