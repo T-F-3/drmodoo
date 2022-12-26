@@ -459,17 +459,6 @@ h3 {
   position: sticky;
 }
 
-.clean_beautyafter::after {
-  content: "+";
-  position: absolute;
-  right: -28px;
-  top: 40%;
-  transform: translateY(-50%);
-  display: block;
-  font-size: 5rem;
-  font-weight: bold;
-  color: #004e5f;
-}
 .clean_beautyafter::before {
   content: "";
   position: absolute;
@@ -478,6 +467,17 @@ h3 {
   width: 2px;
   height: 80%;
   background-color: #c0c0bf;
+}
+.clean_beautyafter::after {
+  content: "+";
+  position: absolute;
+  right: -6.3%;
+  top: 40%;
+  transform: translateY(-50%);
+  display: block;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #004e5f;
 }
 
 .safety_certificate {
