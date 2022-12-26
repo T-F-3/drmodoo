@@ -23,23 +23,33 @@ Promotion();
 
  /* ----------header---------- */
  (function headerSlide() {
-    const headerTopImg = document.querySelector('.Headimgbox .img2');
+    const headerTopImg1 = document.querySelector('.Headimgbox .img1');
+    const headerTopImg2 = document.querySelector('.Headimgbox .img2');
     const headerBottomNeBtn1 = document.querySelector('.Headimgbox .siled1');
     const headerBottomNeBtn2 = document.querySelector('.Headimgbox .siled2');
 
 
 
     headerBottomNeBtn1.addEventListener('click', () => {
-        headerTopImg.classList.toggle('ative');
+        headerTopImg2.classList.toggle('ative');
     })
     headerBottomNeBtn2.addEventListener('click', () => {
-        headerTopImg.classList.toggle('ative');
+        headerTopImg2.classList.toggle('ative');
+    });
+    /* 슬라이드1 a링크 z-index */
+    headerBottomNeBtn1.addEventListener('click', () => {
+        headerTopImg1.classList.toggle('ative');
+    })
+    headerBottomNeBtn2.addEventListener('click', () => {
+        headerTopImg1.classList.toggle('ative');
     });
 })();
 // setInterval(콜백함수, 시간);
 setInterval(function () {
-    const headerTopImg = document.querySelector('.Headimgbox .img2');
-    headerTopImg.classList.toggle('ative');
+    const headerTopImg2 = document.querySelector('.Headimgbox .img2');
+    headerTopImg2.classList.toggle('ative');
+    const headerTopImg1 = document.querySelector('.Headimgbox .img1');
+    headerTopImg1.classList.toggle('ative');
 }, 4000);
 
 
