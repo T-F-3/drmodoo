@@ -45,6 +45,9 @@ p {
    position: relative;
    transition: 0.5s;
 }
+.top_promotion p {
+   text-align: center;
+}
 .top_promotion > .x {
    position: absolute;
    right: 5px;
