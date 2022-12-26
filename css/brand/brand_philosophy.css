@@ -110,28 +110,26 @@ nav .main_menu_ul > li > a:hover::after {
   overflow: hidden;
   flex-direction: column;
   position: absolute;
-  top: 90px;
+  top: 79px;
 }
 
 .sub_menu_ul li {
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
-nav .sub_menu_ul > li a {
+nav .sub_menu_ul>li a {
   width: 160px;
   background-color: white;
   font-size: 17px;
 }
 
 .sub_menu_ul li a:hover {
-  background-color: #004e5f;
+  background-color: #004E5F;
   color: white;
 }
 
-nav .main_menu_ul li:hover > .sub_menu_ul li {
-  opacity: 1;
-  pointer-events: all;
+nav .main_menu_ul li:hover>.sub_menu_ul li {
+  display: block;
 }
 
 /* 검색창 */
