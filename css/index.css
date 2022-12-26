@@ -101,29 +101,30 @@ nav .main_menu_ul > li > a:hover::after {
 /* 움직이는 밑줄 */
 
 /* 서브메뉴 */
-nav .sub_menu_ul {
+.sub_menu_ul {
   overflow: hidden;
   flex-direction: column;
   position: absolute;
-  top: 90px;
+  top: 79px;
 }
-nav .sub_menu_ul li {
-  opacity: 0;
-  pointer-events: none;
+
+.sub_menu_ul li {
+  display: none;
 }
-nav .sub_menu_ul > li a {
+
+nav .sub_menu_ul>li a {
   width: 160px;
   background-color: white;
   font-size: 17px;
 }
-nav .sub_menu_ul li a:hover {
-  background-color: #004e5f;
+
+.sub_menu_ul li a:hover {
+  background-color: #004E5F;
   color: white;
 }
 
-nav .main_menu_ul li:hover > .sub_menu_ul li {
-  opacity: 1;
-  pointer-events: all;
+nav .main_menu_ul li:hover>.sub_menu_ul li {
+  display: block;
 }
 
 /* 검색창 */
