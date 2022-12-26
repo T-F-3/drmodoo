@@ -12,6 +12,7 @@
     />
     <meta property="og:site_name" content="닥터모두" />
     <meta property="og:type" content="website" />
+
     <link rel="shortcut icon" href="../../imgs/logo/favicon.png" />
     <link rel="icon" href="../../imgs/logo/favicon.png" />
     <meta
@@ -38,7 +39,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- css -->
-    <link rel="stylesheet" href="../../css/support-css/support-QnAsecret.css" />
+    <link rel="stylesheet" href="../../css/login.css" />
     <!-- nav js -->
     <script defer src="../../js/nav.js"></script>
     <!-- modal js -->
@@ -95,12 +96,12 @@
 
           <ul>
             <li>
-              <a href="../index/login.html"
+              <a href="./login.html"
                 ><img src="../../imgs/sidebar/icon_login.png" alt=""
               /></a>
             </li>
             <li>
-              <a href="../index/login.html"
+              <a href="./login.html"
                 ><img src="../../imgs/sidebar/icon_mypage.png" alt=""
               /></a>
             </li>
@@ -113,31 +114,49 @@
         </div>
       </div>
     </nav>
-    <div class="qna_text_container">
-      <section><h2>Q&A</h2></section>
-
-      <span>Q&A</span>
-    </div>
-    <div class="secret_container">
-      <div class="secret">
-        <section>
-          <h3>비밀글보기</h3>
-          <p>
-            이 글은 비밀글입니다. <u> 비밀번호를 입력하여 주세요.</u>
-            <br />관리자는 확인버튼만 누르시면 됩니다.
-          </p>
-        </section>
-        <p class="password">
-          <label for="secure_password">비밀번호</label>
-          <input type="password" id="secure_password" />
-        </p>
-
-        <div class="btn_wrapper">
-          <a href="./support-QnA.html" class="btn_list">목록</a>
-          <a href="#" class="btn_check">확인</a>
+    <!-- 로그인 -->
+    <section>
+      <div class="container">
+        <div class="login_table">
+          <div class="tltitleArea">
+            <h3>Login</h3>
+          </div>
+          <div class="loginArea"><input type="ID" placeholder="아이디" /></div>
+          <div class="loginArea">
+            <input type="password" placeholder="비밀번호" />
+          </div>
+          <div class="security">
+            <div class="connect_wrap">
+              <span><input type="checkbox" />아이디 저장</span>
+              <span>
+                <img src="../../imgs/btn/ico_access.gif" alt="자물쇠" />보안접속
+              </span>
+            </div>
+            <div class="find">
+              <sapn class="find_id">아이디 찾기</sapn>
+              <sapn class="find_pw">비밀번호 찾기</sapn>
+            </div>
+          </div>
+          <div class="btn_wrapper">
+            <a href="" class="login_btn">로그인</a>
+            <a href="" class="join_btn">회원가입</a>
+            <a href="" class="kakao_join">카카오 1초 로그인/회원가입</a>
+          </div>
+          <div class="easy_login">
+            <span>간편로그인</span>
+            <div class="icon_wrapper">
+              <a href=""><img src="../../imgs/btn/kakaotalk.png" alt="" /></a>
+              <a href=""><img src="../../imgs/btn/naver.png" alt="" /></a>
+              <a href=""><img src="../../imgs/btn/facebook.png" alt="" /></a>
+              <a href=""><img src="../../imgs/btn/google.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="nonmember">
+            <a href="">비회원 주문조회</a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- 사이드네비 -->
     <div id="sidebar_container">
       <div class="side_btn">
@@ -399,11 +418,6 @@
       </div>
     </footer>
 
-    <script>
-      const btnCheck = document.querySelector(".btn_check");
-      btnCheck.addEventListener("click", (e) => {
-        alert("비밀글 비밀번호가 틀립니다.");
-      });
-    </script>
+    <script></script>
   </body>
 </html>
