@@ -94,12 +94,6 @@
       </div>
     </nav>
     <script>
-      // AtopPromotionBtn.addEventListener('click',()=>{
-      //     const AtopPromotionBtn = document.querySelector('.x');
-      //     const AtopPromotion = document.querySelector('.top_promotion .x')
-
-      // })
-
       function Promotion() {
         const AtopPromotionBtn = document.querySelector(".x");
         const AtopPromotion = document.querySelector(".top_promotion");
@@ -207,9 +201,7 @@
             </div>
           </div>
           <div class="review_2nd main">
-            <div class="snd_img">
-              <!-- <img src="../imgs/Review/review2.jpg" alt="" /> -->
-            </div>
+            <div class="snd_img"></div>
             <div class="box box_img2">
               <div class="fst_txt flex">
                 <svg
@@ -287,9 +279,7 @@
             </div>
           </div>
           <div class="review_3rd main">
-            <div class="trd_img">
-              <!-- <img src="../imgs/Review/review3.jpg" alt="" /> -->
-            </div>
+            <div class="trd_img"></div>
             <div class="box box_img3">
               <div class="fst_txt flex">
                 <svg
@@ -368,9 +358,7 @@
             </div>
           </div>
           <div class="review_4th main">
-            <div class="fth_img">
-              <!-- <img src="../imgs/Review/review5.jpg" alt="" /> -->
-            </div>
+            <div class="fth_img"></div>
             <div class="box box_img4">
               <div class="fst_txt flex">
                 <svg
@@ -448,9 +436,7 @@
             </div>
           </div>
           <div class="review_5st main">
-            <div class="fith_img">
-              <!-- <img src="../imgs/Review/review6.jpg" alt="" /> -->
-            </div>
+            <div class="fith_img"></div>
             <div class="box box_img5">
               <div class="fith_txt flex">
                 <svg
@@ -529,9 +515,7 @@
             </div>
           </div>
           <div class="review_6th main">
-            <div class="sth_img">
-              <!-- <img src="../imgs/Review/review1.jpg" alt="" /> -->
-            </div>
+            <div class="sth_img"></div>
             <div class="box box_img6">
               <div class="sit_txt flex">
                 <svg
@@ -620,7 +604,7 @@
               </div>
               <div class="text_box">
                 <label>
-                  <input type="search" value="" />
+                  <input onkeyup="filter()" type="search" id="value" />
                   <span class="material-symbols-outlined">search </span></label
                 >
               </div>
@@ -716,7 +700,7 @@
                     </div>
                   </div>
                   <div class="review_p">
-                    <p>
+                    <p class="name">
                       두피가 깨끗해졌습니당 원래 울긋불긋 트러블 있고 비듬 있고
                       떡지고 아주 총체적난국이었는데 한 달 쓰고 사람 머리 됐어여
                       감사의 의미로 3통 재구매합니다 쟁겨두고 써야댐
@@ -813,7 +797,7 @@
                     </div>
                   </div>
                   <div class="review_p">
-                    <p>
+                    <p class="name">
                       머리 막 감았을 때랑 하루 지났을 때인데, 비듬이나 떡짐이
                       없네요 땀도 흘렸는데. 원래 샤워 반나절만에 비듬 떨어지는
                       사람이었던지라 너무 좋습니다
@@ -911,7 +895,7 @@
                     </div>
                   </div>
                   <div class="review_p">
-                    <p>
+                    <p class="name">
                       머리에 저 큰 트러블 보이시나요..? 저게 사라졌어요... 아직
                       흉터처럼 조금 남아있긴 한데 암튼 저거 달고 산 지 몇 개월
                       됐는데 샴푸 바꾸고 한 달도 안돼서 사라져 가는 게 너무
@@ -1009,19 +993,20 @@
                     </div>
                   </div>
                   <div class="review_p">
-                    <p>
+                    <p class="name">
                       전에 다른 샴푸쓰고도 안잡힌 머리에 비듬이 이거 쓰고 나서
                       바로<br />
                       잡힌 거 보고 너무 신기했어요 ㅋㅋㅋ 이제는 머리 상하지
                       않게 잘 관리해보려고 합니다
                     </p>
-                  </div>
-                  <div class="riview_img">
-                    <img src="../imgs/Review/review5.jpg" alt="/review5" />
-                  </div>
-                  <div class="widget_report">
-                    <img src="./review_report.png" alt="report" />
-                    <span>신고,차단</span>
+
+                    <div class="riview_img">
+                      <img src="../imgs/Review/review5.jpg" alt="/review5" />
+                    </div>
+                    <div class="widget_report">
+                      <img src="./review_report.png" alt="report" />
+                      <span>신고,차단</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1107,7 +1092,7 @@
                     </div>
                   </div>
                   <div class="review_p any active">
-                    <p>
+                    <p class="name">
                       여름에 쿨링샴푸 최고인듯요 아들이 머리냄새가 여간
                       심한게<br />
                       아니라 이것저것 좋다는거 다 써봐도 별소용이 없더니, 이거
@@ -1161,6 +1146,45 @@
       </div>
     </main>
 
+    <script>
+      function active() {
+        const span = document.querySelector(".span");
+        const more_btn = document.querySelector("#more_btn");
+        const close_btn = document.querySelector("#close_btn");
+        const img = document.querySelector(".img");
+
+        more_btn.addEventListener("click", () => {
+          span.style.display = "inline-block";
+          img.classList.add("active");
+          more_btn.style.display = "none";
+          close_btn.style.display = "block";
+        });
+        close_btn.addEventListener("click", () => {
+          span.style.display = "none";
+          more_btn.style.display = "block";
+          close_btn.style.display = "none";
+          img.classList.remove("active");
+        });
+      }
+      active();
+
+      function filter() {
+        let value, name, item, i;
+
+        value = document.getElementById("value").value.toUpperCase();
+        item = document.getElementsByClassName("review_p");
+        list = document.getElementsByClassName("flex_list");
+
+        for (i = 0; i < item.length; i++) {
+          name = item[i].getElementsByClassName("name");
+          if (name[0].innerHTML.toUpperCase().indexOf(value) > -1) {
+            list[i].style.display = "flex";
+          } else {
+            list[i].style.display = "none";
+          }
+        }
+      }
+    </script>
     <!-- 사이드바 -->
     <div id="sidebar_container">
       <div class="side_btn">
@@ -1201,7 +1225,6 @@
         </li>
       </ul>
     </div>
-
     <script>
       const sidebar = document.querySelector("#sidebar_container");
       const sidebarBtn = document.querySelector(".side_btn");
@@ -1362,28 +1385,6 @@
       });
     </script>
 
-    <script>
-      function active() {
-        const span = document.querySelector(".span");
-        const more_btn = document.querySelector("#more_btn");
-        const close_btn = document.querySelector("#close_btn");
-        const img = document.querySelector(".img");
-
-        more_btn.addEventListener("click", () => {
-          span.style.display = "inline-block";
-          img.classList.add("active");
-          more_btn.style.display = "none";
-          close_btn.style.display = "block";
-        });
-        close_btn.addEventListener("click", () => {
-          span.style.display = "none";
-          more_btn.style.display = "block";
-          close_btn.style.display = "none";
-          img.classList.remove("active");
-        });
-      }
-      active();
-    </script>
     <!-- footer -->
     <footer>
       <div class="footer_container">
