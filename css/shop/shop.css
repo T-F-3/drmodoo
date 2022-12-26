@@ -166,6 +166,7 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
 
 /* main */
 .container {
+  text-align: center;
   margin: 0 auto;
   padding: 0 5%;
   position: relative;

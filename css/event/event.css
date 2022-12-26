@@ -166,6 +166,7 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
 
 /* 이벤트 h2 */
 .container {
+  text-align: center;
   margin: 0 auto;
   padding: 0 5%;
   margin: 0 0 20px;
