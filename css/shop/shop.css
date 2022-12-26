@@ -758,7 +758,7 @@ footer {
   margin: 0 auto 0;
   position: relative;
   padding: 0 0 150px;
-  background: url(../imgs/index/foot_bg.jpg) repeat center;
+  background: url(../../imgs/index/foot_bg.jpg) repeat center;
   background-size: cover;
   clear: both;
   overflow: hidden;
