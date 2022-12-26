@@ -189,7 +189,7 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   top: 50px;
 }
 .flex_review .main .box {
-  filter: brightness(0.9);
+  filter: brightness(0.8);
   z-index: -9999;
 }
 .flex_review .main .box .flex {
