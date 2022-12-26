@@ -462,20 +462,20 @@ h3 {
 .clean_beautyafter::before {
   content: "";
   position: absolute;
-  bottom: 20%;
+  top:10%;
   right: 0;
   width: 2px;
   height: 80%;
-  background-color: #c0c0bf;
+  background-color: #e5e5e5;
 }
 .clean_beautyafter::after {
   content: "+";
   position: absolute;
-  right: -6.3%;
-  top: 40%;
-  transform: translateY(-50%);
+  right: -50px;
+  top: 50%;
+  transform: translate(-50% , -50%);
   display: block;
-  font-size: 5rem;
+  font-size: 70px;
   font-weight: bold;
   color: #004e5f;
 }
@@ -616,7 +616,7 @@ h3 {
 }
 
 .philosophy_grid_item h2 {
-  font-size: 80px;
+  font-size: 75px;
   margin-top: 80px;
 }
 .philosophy_grid_item p {
