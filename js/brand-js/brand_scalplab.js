@@ -38,7 +38,6 @@
                 txth2.style.opacity = '0'
             } 
 
-            console.log(scrollY)
 
             if(scrollY>=850){
                 txtp.style.color='#000'

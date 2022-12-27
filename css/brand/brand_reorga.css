@@ -55,10 +55,11 @@ p {
 
 /* -------header---------- */
 header {
-  margin-bottom: 500px;
+  margin-bottom: 1000px;
   font-family: "Noto Sans KR", "YUniverse-B", 돋움, sans-serif;
   overflow: hidden;
   text-transform: capitalize;
+
 }
 
 header .Headerimgbox {
