@@ -362,7 +362,7 @@ caption {
   overflow: hidden;
 }
 /* 총 상품 금액 */
-.SalePrice {
+.sale_textbox .SalePricee {
   margin: 10px 0 0;
   padding: 25px 0 25px;
   font-size: 16px;
@@ -371,20 +371,19 @@ caption {
   clear: both;
   overflow: hidden;
   border-top: 1px solid #e8e8e8;
-  justify-content: space-between;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.SalePrice > strong {
+.SalePricee > strong {
   display: inline-block;
   line-height: 29px;
   color: #333;
 }
-.SalePrice span {
+.SalePricee span {
   float: right;
 }
-.SalePrice span strong em {
+.SalePricee span strong em {
   font-style: normal;
   font-size: 22px;
   font-weight: bold;
