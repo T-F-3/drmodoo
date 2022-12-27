@@ -226,6 +226,7 @@ header .img h2 {
 }
 header .textbox1 {
   display: block;
+  z-index: 99;
 }
 header .textbox2 {
   display: none;
@@ -233,6 +234,9 @@ header .textbox2 {
 /* js */
 header .img2.ative .textbox2 {
   display: block;
+}
+header .img1.ative .textbox1 {
+  z-index: 0;
 }
 /* header btn */
 header .btn a {
