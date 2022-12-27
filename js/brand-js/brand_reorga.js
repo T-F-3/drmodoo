@@ -1,11 +1,11 @@
    
 // 버튼 창
 
-const certificateBtn = document.querySelectorAll('.material-symbols-outlined')
-const certificateIn = document.querySelectorAll('.Complex_txt div')
+function reorgaBtn(){
+  const certificateBtn = document.querySelectorAll('.material-symbols-outlined');
+  const certificateIn = document.querySelectorAll('.Complex_txt div');
 
-
-for (let i = 0; i < certificateBtn.length; i++) {
+    for (let i = 0; i < certificateBtn.length; i++) {
   certificateBtn[i].addEventListener('click', function (e) {
     certificateIn.forEach(function (e) {
       e.classList.remove("active");
@@ -17,6 +17,12 @@ for (let i = 0; i < certificateBtn.length; i++) {
     certificateIn[i - 1].classList.toggle('active');
   })
 }
+}
+
+reorgaBtn();
+
+
+
 
 
 // setInterval(콜백함수, 시간);
