@@ -175,7 +175,7 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   position: relative;
   display: flex;
   margin: 0 auto 100px;
-  padding: 100px 0;
+  padding: 100px 0 0;
   width: 80%;
 }
 .SaleGrid .sale_imgbox {
@@ -194,6 +194,7 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   border-bottom: 1px solid #e8e8e8;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .SaleGrid .sale_textbox .SalePrice p {
   padding: 8px;
@@ -362,7 +363,7 @@ caption {
 }
 /* 총 상품 금액 */
 .SalePrice {
-  margin: 10px auto 0;
+  margin: 10px 0 0;
   padding: 25px 0 25px;
   font-size: 16px;
   color: #333;
@@ -371,6 +372,9 @@ caption {
   overflow: hidden;
   border-top: 1px solid #e8e8e8;
   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .SalePrice > strong {
   display: inline-block;
@@ -387,8 +391,42 @@ caption {
   color: #000;
 }
 /* 구매하기,장바구니,관심상품 */
-.saleLink {
+.SaleLink {
   overflow: hidden;
+  padding: 3px 0;
+}
+.SaleLink .Sale_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SaleLink .Sale_btn a {
+  margin: 0 2px;
+  padding: 24px 0;
+  font-size: 17px;
+  border-radius: 2px;
+  line-height: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  border-color: #aaa;
+  text-transform: uppercase;
+  background-color: #fff;
+  width: 190px;
+  border: 1px solid #ccc;
+}
+.SaleLink .Sale_btn .get {
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  word-spacing: -0.5px;
+  letter-spacing: 0;
+  color: #fff;
+  background-color: #004e5f;
+}
+/* 네이버 */
+.Sale_naverbtn {
+  float: left;
 }
 /* 상세정보,후기,큐앤에이 */
 .SaleDetailed {
@@ -396,12 +434,36 @@ caption {
   position: relative;
 }
 .SaleDetailed ul {
-  margin: 150px auto 50px;
+  margin: 120px auto 50px;
   text-align: center;
   border-bottom: 1px #eee solid;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 20px 50px;
+  font-weight: 300;
 }
-
+.SaleDetailed ul li a {
+  padding: 20px 50px;
+}
+.SaleDetailed ul li .color888 {
+  color: #888;
+}
+/* 상세설명 이미지 */
+.SaleDetailed .Sale_content img {
+  vertical-align: top;
+}
+.SaleDetailed .Sale_content a {
+  margin: 0;
+  padding: 0;
+}
+.SaleDetailed .Sale_content p {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
 /* 사이드바 */
 
 #sidebar_container {
