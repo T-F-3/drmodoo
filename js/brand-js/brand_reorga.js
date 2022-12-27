@@ -1,4 +1,23 @@
    
+// 버튼 창
+
+const certificateBtn = document.querySelectorAll('.material-symbols-outlined')
+const certificateIn = document.querySelectorAll('.Complex_txt div')
+
+
+ for(let i =0; i < certificateBtn.length; i++){
+  certificateBtn[i].addEventListener('click',function(e){
+    certificateBtn[i].classList.toggle('active');
+    certificateIn[i-1].classList.toggle('active');
+
+  })
+}
+
+
+
+
+
+
 
 // setInterval(콜백함수, 시간);
 setInterval(function () {
@@ -29,20 +48,5 @@ setInterval(function () {
 
      });
     
-
-// 버튼 창
-
-let certificateBtn = document.querySelectorAll('.material-symbols-outlined')
-let certificateIn = document.querySelectorAll('.Complex_txt div')
-
-
-
-for(let i =0; i < certificateBtn.length; i++){
-  certificateBtn[i].addEventListener('click',function(){
-    certificateBtn[i].classList.toggle('active');
-    certificateIn[i-1].classList.toggle('active');
-
-  })
-}
 
 
