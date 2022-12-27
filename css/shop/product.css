@@ -294,6 +294,7 @@ caption {
 .SaleProduct_1 {
   width: 100%;
   text-align: left;
+  display: none;
 }
 .SaleProduct_1 tr td p {
   padding: 20px 20px;
