@@ -194,7 +194,7 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   border-bottom: 1px solid #e8e8e8;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .SaleGrid .sale_textbox .SalePrice p {
   padding: 8px;
@@ -362,7 +362,7 @@ caption {
   overflow: hidden;
 }
 /* 총 상품 금액 */
-.sale_textbox .SalePricee {
+.SalePrice {
   margin: 10px 0 0;
   padding: 25px 0 25px;
   font-size: 16px;
@@ -371,19 +371,20 @@ caption {
   clear: both;
   overflow: hidden;
   border-top: 1px solid #e8e8e8;
+  justify-content: space-between;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.SalePricee > strong {
+.SalePrice > strong {
   display: inline-block;
   line-height: 29px;
   color: #333;
 }
-.SalePricee span {
+.SalePrice span {
   float: right;
 }
-.SalePricee span strong em {
+.SalePrice span strong em {
   font-style: normal;
   font-size: 22px;
   font-weight: bold;

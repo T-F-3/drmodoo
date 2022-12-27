@@ -5,16 +5,18 @@ const certificateBtn = document.querySelectorAll('.material-symbols-outlined')
 const certificateIn = document.querySelectorAll('.Complex_txt div')
 
 
-  for(let i =0; i < certificateBtn.length; i++){
-  certificateBtn[i].addEventListener('click',function(e){
-     certificateIn.forEach(function (e) {
-    e.classList.remove("active");
-  });
+for (let i = 0; i < certificateBtn.length; i++) {
+  certificateBtn[i].addEventListener('click', function (e) {
+    certificateIn.forEach(function (e) {
+      e.classList.remove("active");
+    });
+    certificateBtn.forEach(function (e) {
+      e.classList.remove("active");
+    });
     certificateBtn[i].classList.toggle('active');
-    certificateIn[i-1].classList.toggle('active');
+    certificateIn[i - 1].classList.toggle('active');
   })
 }
-
 
 
 // setInterval(콜백함수, 시간);
