@@ -169,6 +169,7 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   text-align: center;
   margin: 0 auto;
   padding: 0 5%;
+  /* max-width: 1500px; */
 }
 .SaleGrid {
   position: relative;
@@ -227,9 +228,167 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
   color: #000;
   font-weight: 500;
 }
-/* 기본정보 table 여기부터 하기!!!*/
-.Sale_table table caption {
+
+caption {
   display: none;
+}
+.Sale_table table tbody th {
+  color: #333;
+  width: 115px;
+  padding: 5px 0;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.Sale_table table tbody tr .style {
+  font-size: 14px;
+  color: #555555;
+}
+.Sale_table table tbody tr .row {
+  padding-top: 10px;
+}
+.Sale_table table tbody tr td select {
+  display: inline-block;
+  min-width: 100px;
+  padding: 0 0 0 5px;
+  border: 1px #ddd solid;
+  width: 100%;
+  color: #555;
+  height: 35px;
+  line-height: 32px;
+}
+.Sale_table table tbody tr td .value {
+  font-size: 0;
+  line-height: 0;
+  color: #999;
+  word-break: break-all;
+}
+.Sale_table table tbody td {
+  font-size: 14px;
+  color: #555555;
+  line-height: 18px;
+  padding: 5px 0;
+  text-align: left;
+  width: 80%;
+}
+.Sale_table table tbody td .quantity {
+  position: absolute;
+  right: 30px;
+  width: 11px;
+  height: 21px;
+  margin-top: -10px;
+}
+.SaleProduct {
+  width: 100%;
+  padding: 0;
+  background: #ececec;
+}
+.SaleProduct table {
+  width: 100%;
+}
+.SaleProduct table thead tr {
+  display: none;
+}
+/* 1 */
+.SaleProduct_1 {
+  width: 100%;
+  text-align: left;
+}
+.SaleProduct_1 tr td p {
+  padding: 20px 20px;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.SaleProduct_1 tr td p span {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.SaleProduct_1 tr td .right {
+  text-align: right;
+  width: 50%;
+  position: absolute;
+  right: 30px;
+  margin-top: -13px;
+}
+.SaleProduct_1 tr td .quantity {
+  position: relative;
+  right: 10px;
+}
+.SaleProduct_1 tr td .quantity input {
+  font-size: 100%;
+  width: 50px;
+  font-family: "Nunito Sans", Helvetica, Arial, "NanumBarunGothic", sans-serif;
+  color: #000;
+  vertical-align: middle;
+  outline: none;
+  border: 1px solid #d4d8d9;
+  border-radius: 3px 0 0 3px;
+  padding: 0 2px 0 3px;
+  height: 22px;
+  line-height: 22px;
+}
+.SaleProduct_1 tr td .quantity .up {
+  position: absolute;
+  left: 30px;
+  top: -4px;
+}
+.SaleProduct_1 tr td .quantity .down {
+  position: absolute;
+  left: 30px;
+  top: 6px;
+}
+.SaleProduct_1 tr td p {
+  padding: 20px 20px;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.SaleProduct_1 > td {
+  padding: 0;
+  background: #ececec;
+}
+
+.delete img {
+  position: absolute;
+  right: 10px;
+  width: 11px;
+  height: 11px;
+  margin-top: 8px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* 총 상품 금액 */
+.SalePrice {
+  margin: 10px auto 0;
+  padding: 25px 0 25px;
+  font-size: 16px;
+  color: #333;
+  vertical-align: middle;
+  clear: both;
+  overflow: hidden;
+  border-top: 1px solid #e8e8e8;
+  justify-content: space-between;
+}
+.SalePrice > strong {
+  display: inline-block;
+  line-height: 29px;
+  color: #333;
+}
+.SalePrice span {
+  float: right;
+}
+.SalePrice span strong em {
+  font-style: normal;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+}
+/* 구매하기,장바구니,관심상품 */
+.saleLink {
+  overflow: hidden;
 }
 /* 상세정보,후기,큐앤에이 */
 .SaleDetailed {
