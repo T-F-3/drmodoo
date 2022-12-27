@@ -8,7 +8,7 @@ body {
    /* text-align: center; */
    width: 100%;
 }
-section h2 {
+.text_box h2 {
    text-align: center;
    font-family: 'YUniverse-B', 'Noto Sans KR', sans-serif;
    font-size: 90px;
@@ -21,6 +21,137 @@ section h2 {
 a {
    text-decoration: none;
    color: inherit;
+   display: inline-block;
+}
+
+li {
+   list-style: none;
+}
+/* ----------------------------------- */
+
+.cart_container {
+   margin: 0 auto;
+   position: relative;
+   min-height: 80vw;
+   max-width: 1500px;
+   padding: 0 5%;
+}
+.cart_container .delivery_wrapper {
+   display: flex;
+   border-bottom: 1px solid #eee;
+   margin: 0 0 20px;
+   font: 16px;
+}
+.cart_container .delivery_wrapper .Domestic_delivery,
+.overseas_delivery {
+   padding: 12px 12px 11px 0;
+   color: #bbb;
+}
+
+.cart_container .delivery_wrapper .overseas_delivery {
+   color: black;
+}
+/* --------------------------------- */
+.cart_container .inner_box {
+   text-align: center;
+   margin: 50px auto;
+   color: #bbb;
+}
+
+/* ------------------------------------ */
+
+.cart_container .btn_wrapper {
+   text-align: center;
+   margin: 10px 0 40px;
+   padding: 10px 0;
+}
+
+.cart_container .btn_wrapper a:nth-child(1) {
+   width: 160px;
+   padding: 14px 16px;
+   background-color: #004e5f;
+   color: white;
+   text-align: center;
+   border-radius: 2px;
+
+   margin-right: 2px;
+   transition: all 0.5s;
+}
+.cart_container .btn_wrapper a:nth-child(1):hover {
+   background-color: #666;
+}
+
+.cart_container .btn_wrapper a:nth-child(2) {
+   width: 160px;
+   padding: 14px 16px;
+   background-color: #888b8d;
+   color: white;
+   text-align: center;
+   border-radius: 2px;
+
+   margin-right: 2px;
+   transition: all 0.5s;
+}
+
+.cart_container .btn_wrapper a:nth-child(2):hover {
+   background-color: #d0d0d0;
+}
+.cart_container .btn_wrapper a:nth-child(3) {
+   width: 158px;
+   padding: 14px 16px;
+   border: 1px solid #ccc;
+   border-radius: 2px;
+
+   margin-right: 2px;
+   transition: all 0.5s;
+}
+.cart_container .btn_wrapper a:nth-child(3):hover {
+   color: #aaa;
+}
+
+/* --------------------------------------- */
+.cart_container .caution_wrapper {
+   padding: 0 0 12px;
+}
+.cart_container .caution_wrapper p {
+   margin-bottom: 13px;
+}
+.cart_container .caution_wrapper li {
+   padding: 0 0 0 25px;
+   font-size: 11px;
+   color: #757575;
+   line-height: 1.8;
+}
+.cart_container .caution_wrapper .shopping_basket {
+   margin-top: 13px;
+}
+.cart_container .caution_wrapper .shopping_basket p {
+   margin-bottom: 13px;
+   font-size: 12px;
+   font-weight: 400;
+}
+.cart_container .caution_wrapper .interest_free p {
+   margin-top: 13px;
+   font-size: 12px;
+   font-weight: 400;
+}
+.cart_container .caution_wrapper li:nth-child(1) {
+   background: url(../imgs/btn/num1.png) no-repeat;
+}
+.cart_container .caution_wrapper li:nth-child(2) {
+   background: url(../imgs/btn/num2.png) no-repeat;
+}
+.cart_container .caution_wrapper li:nth-child(3) {
+   background: url(../imgs/btn/num3.png) no-repeat;
+}
+.cart_container .caution_wrapper li:nth-child(4) {
+   background: url(../imgs/btn/num4.png) no-repeat;
+}
+.cart_container .caution_wrapper .shopping_basket li:nth-child(5) {
+   background: url(../imgs/btn/num5.png) no-repeat;
+}
+.cart_container .caution_wrapper .shopping_basket li:nth-child(6) {
+   background: url(../imgs/btn/num6.png) no-repeat;
 }
 
 /* 네비게이션란 */
@@ -664,148 +795,6 @@ nav .main_menu_ul li:hover > .sub_menu_ul li {
 #sidebar_container ul li a {
    display: block;
    padding: 4px;
-}
-/* 로그인 */
-h3 {
-   font-size: 2rem;
-   font-family: 'YUniverse-B', 'Noto Sans KR', sans-serif;
-   color: #000;
-   text-transform: capitalize;
-}
-.container .login_table {
-   position: relative;
-   margin: 60px auto;
-   padding: 30px;
-   max-width: 500px;
-   background: #fff;
-}
-.container .login_table .titleArea {
-   margin: 0 auto 50px;
-   text-align: left;
-}
-.container .login_table .loginArea input {
-   width: 100%;
-   height: 45px;
-   line-height: 45px;
-   padding: 2px 2px 2px 7px;
-   border: 0 none;
-   font-variant-east-asian: 16px;
-   box-sizing: border-box;
-   border-bottom: 1px solid #d5d5d5;
-
-   outline: none;
-}
-.container .login_table .security {
-   display: flex;
-   justify-content: space-between;
-
-   margin: 10px 0 30px;
-   color: #888;
-   text-align: left;
-   font-size: 14px;
-}
-.container .login_table .security .connect_wrap .checkbox {
-   margin: 1px 2px 0 0;
-   opacity: 0.5;
-   border: #888;
-}
-
-.container .login_table .security .connect_wrap span {
-   margin-left: 4px;
-}
-.container .login_table .security .connect_wrap span img {
-   padding: 2px;
-}
-.container .login_table .security .find {
-   position: relative;
-}
-.container .login_table .security .find .find_id::after {
-   content: '';
-   position: absolute;
-   left: 46%;
-   top: 50%;
-   transform: translateY(-50%);
-   display: block;
-   width: 1px;
-   height: 12px;
-   background-color: #ddd;
-}
-.container .login_table .security .find .find_pw {
-   margin-left: 5px;
-   padding-left: 5px;
-}
-.container .login_table .btn_wrapper {
-   width: 100%;
-   text-align: center;
-}
-.container .login_table .btn_wrapper .login_btn {
-   display: block;
-   background: #004e5f;
-   padding: 20px 16px;
-   font-size: 17px;
-   color: #fff;
-
-   margin: 0 0 7px;
-   transition: all 0.5s;
-}
-.container .login_table .btn_wrapper .login_btn:hover {
-   background-color: #003d4a;
-}
-.container .login_table .btn_wrapper .join_btn {
-   display: block;
-   border: 1px solid #004e5f;
-   padding: 20px 16px;
-   font-size: 17px;
-   color: #004e5f;
-
-   margin: 0 0 7px;
-   transition: all 0.5s;
-}
-.container .login_table .btn_wrapper .join_btn:hover {
-   color: #aaa;
-}
-
-.container .login_table .btn_wrapper .kakao_join {
-   display: block;
-   padding: 20px 16px;
-   font-size: 17px;
-   background-color: #ffeb3b;
-   color: #3e2723;
-   border: none;
-   margin: 0 0 7px;
-
-   font-weight: 400;
-}
-.container .login_table .easy_login {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-
-   margin: 20px 0;
-   padding: 20px 0;
-
-   border-bottom: 1px solid #f5f5f5;
-   color: #888;
-}
-
-.container .login_table .nonmember {
-   display: block;
-   width: 100%;
-   text-align: center;
-
-   border: 1px solid #f5f5f5;
-   color: #888;
-   border-radius: 2px;
-
-   line-height: 18px;
-
-   padding: 20px 16px;
-   font-size: 17px;
-
-   background-color: #f5f5f5;
-}
-.container .login_table .nonmember:hover {
-   background-color: #f0f0f0;
 }
 /* -----footer------ */
 footer {
